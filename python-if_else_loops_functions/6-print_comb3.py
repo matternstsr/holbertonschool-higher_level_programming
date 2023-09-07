@@ -2,9 +2,6 @@
 
 
 def print_uniq_combos():
-
-
-
     for a in range(10):
         for b in range(ai + 1, 10):
             if a == 8 and b == 9:
