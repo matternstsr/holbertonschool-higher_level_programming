@@ -1,4 +1,4 @@
-cmod u + x *
+cmod +x *
 echo "Enter your commit message: "
 read message
 
