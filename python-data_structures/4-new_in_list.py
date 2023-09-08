@@ -5,4 +5,5 @@ def new_in_list(my_list, idx, element):
         return (my_list)
 
     stringcopy = my_list.copy()
+    stringcopy[idx] = element
     return (stringcopy)
