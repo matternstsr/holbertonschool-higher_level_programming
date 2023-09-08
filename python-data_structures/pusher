@@ -1,11 +1,7 @@
-cmod +x *
-echo "Enter your commit message: "
-read message
+#!/bin/bash
 
-new_message=$(echo $message | tr ' ' '_')
-
+chmod -R 755 .
+read -p "Enter commit message: " message
 git add .
-git commit -m "$new_message"
-if ! git push; then
-    echo "Sorry couldn't push that Commit Failed"
-fi
+git commit -m "$message"
+git push
