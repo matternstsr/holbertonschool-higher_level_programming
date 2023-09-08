@@ -4,6 +4,5 @@ def new_in_list(my_list, idx, element):
     if idx < 0 or idx > (len(my_list) - 1):
         return (my_list)
 
-    stringcopy = [x for x in my_list]
-    stringcopy[idx] = element
+    stringcopy = my_string.copy()
     return (stringcopy)
