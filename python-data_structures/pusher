@@ -1,0 +1,11 @@
+cmod +x *
+echo "Enter your commit message: "
+read message
+
+new_message=$(echo $message | tr ' ' '_')
+
+git add .
+git commit -m "$new_message"
+if ! git push; then
+    echo "Sorry couldn't push that Commit Failed"
+fi
