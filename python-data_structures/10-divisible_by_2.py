@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def divisble_by_2(my_list=[]):
+def divisible_by_2(my_list=[]):
     multiples = []
     for idx in range(len(my_list)):
         if my_list[idx] % 2 == 0:
