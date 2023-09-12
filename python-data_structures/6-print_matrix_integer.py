@@ -10,6 +10,6 @@ def print_matrix_integer(matrix=[[]]):
                 if columns == numcolumns - 1:
                     print('{:d}'.format(matrix[rows][columns]))
                 else:
-                    print('{:d} '.format(matrix[rows][ccolumns]), end="")
+                    print('{:d} '.format(matrix[rows][ccolumns]), end='')
     else:
         print()
