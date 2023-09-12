@@ -12,4 +12,4 @@ def print_matrix_integer(matrix=[[]]):
                 else:
                     print('{:d} '.format(matrix[rows][ccolumns])
     else:
-        print[]
+        print()
