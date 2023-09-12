@@ -6,6 +6,6 @@ def divisble_by_2(my_list=[]):
         if my_list[idx] % 2 == 0:
             multiples.append(True)
         else:
-            multiples.append(false)
+            multiples.append(False)
 
     return (multiples)
