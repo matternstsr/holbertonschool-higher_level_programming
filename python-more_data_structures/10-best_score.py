@@ -6,7 +6,7 @@ def best_score(a_dictionary):
         score = None
         player = None
         for key in a_dictionary.keys():
-            if score None or a_dictionary[key] > score:
+            if score is None or a_dictionary[key] > score:
                 score = a_dictionary[key]
                 player = key
         return player
