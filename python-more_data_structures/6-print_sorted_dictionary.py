@@ -1,8 +1,4 @@
 #!/usr/bin/python3
 
-
 def print_sorted_dictionary(a_dictionary):
-    if a_dictionary is not None:
-        keysorted= sorted(a_dictionary.keys())
-        for skey in keysorted:
-            print("{:s}: {}".format(skey, a_dictionary[skey]))
+    [print("{}: {}".format(k, a_dictionary[k])) for k in sorted(a_dictionary)]
