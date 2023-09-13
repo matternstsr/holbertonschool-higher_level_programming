@@ -9,4 +9,4 @@ def best_score(a_dictionary):
             if score None or a_dictionary[key] > score:
                 score = a_dictionary[key]
                 player = key
-        return score
+        return player
