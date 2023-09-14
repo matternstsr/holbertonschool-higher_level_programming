@@ -59,13 +59,16 @@ class Square:
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
 
-    def display(self):
-        """Print square with the # character to the position."""
-        if self.__size == 0:
-            print()
-            return
+            def display(self):
+                """Print square with the # character to the position."""
+                if self.__size == 0:
+                    print()
+                    return
 
-        for _ in range(self.__position[1]):
-            print()
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+                pattern = []
+                for _ in range(self.__position[1]):
+                    pattern.extend([""])
+                for _ in range(self.__size):
+                    pattern.extend(
+                        [" " * self.__position[0] + "#" * self.__size])
+                    print("\n".join(pattern))
