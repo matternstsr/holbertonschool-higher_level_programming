@@ -36,7 +36,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        msgerr = "position must be a tuple of 2 positive integers"
+        msgerr = "position must be a tuple of 2 poisitive integers"
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(v, int) for v in value) or
@@ -49,23 +49,32 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """Print square with the # character."""
+        """Print square with the #. """
         if self.__size == 0:
             print()
             return
 
-        for _ in range(self.__position[1]):
+        for i in range(0, self.__position[1]):
+            print("")
+        for i in range(0, self.__size):
+            for j in range(0, self.__position[0]):
+                print(" ", end="")
+            for k in range(0, self.__size):
+                print("#", end="")
             print()
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
 
     def display(self):
-        """Print square with the # character to the position."""
+        """Print square with the # to the position. """
         if self.__size == 0:
             print()
             return
 
-        for _ in range(self.__position[1]):
-            print()
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+        pattern = [
+            [" " * self.__position[0] + "#" * self.__size]
+            for _ in range(self.__position[1])]
+
+        pattern.extend(
+            (" " * self.__position[0] + "#" * self.__size)
+            for _ in range(self.__size))
+
+        print("\n".join(pattern))
