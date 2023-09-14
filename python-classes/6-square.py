@@ -64,6 +64,7 @@ class Square:
             print()
 
     def display(self):
+        """Print square with the # to the position. """
         if self.__size == 0:
             print()
             return
