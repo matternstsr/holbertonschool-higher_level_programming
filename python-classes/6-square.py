@@ -60,8 +60,7 @@ class Square:
 
         pattern = [
             [" " * self.__position[0] + "#" * self.__size]
-            for _ in range(self.__position[1])
-        ]
+            for _ in range(self.__position[1])]
 
         pattern.extend([" " * self.__position[0] + "#" * self.__size for _ in range(self.__size)])
 
