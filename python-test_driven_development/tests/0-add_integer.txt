@@ -1,0 +1,111 @@
+# You can only use floats and ints?
+# You cant use strings?
+# You cant have more than 1 number?
+# You must have both ints , or one of each float and int?
+# you need to inclulde negative numbers?
+
+The function - add_integer(a, b=98)
+
+=====Successful Functions=====
+>>> add_integer = __import__('0-add_integer').add_integer
+--------regular ints--------
+
+>>> add_integer(22, 52)
+74
+
+--------Floats---------
+
+>>> add_integer(22.6, 28.4)
+40
+
+--------Negatives---------
+
+>>> add_integer(-20, -25)
+-45
+
+>>> add_integer(60, -10)
+50
+
+>>> add_integer(5.2, -7.3)
+-2
+
+--------Combinations----------
+
+>>> add_integer(40.5, -20)
+-20.5
+
+>>> add_integer(50, 10.7)
+15
+
+===END===
+
+
+
+Trying:
+    add_integer = __import__('0-add_integer').add_integer
+Expecting:
+    --------regular ints--------
+**********************************************************************
+File "./tests/0-add_integer.txt", line 10, in 0-add_integer.txt
+Failed example:
+    add_integer = __import__('0-add_integer').add_integer
+Expected:
+    --------regular ints--------
+Got nothing
+Trying:
+    add_integer(22, 52)
+Expecting:
+    74
+ok
+Trying:
+    add_integer(22.6, 28.4)
+Expecting:
+    40
+**********************************************************************
+File "./tests/0-add_integer.txt", line 18, in 0-add_integer.txt
+Failed example:
+    add_integer(22.6, 28.4)
+Expected:
+    40
+Got:
+    50
+Trying:
+    add_integer(-20, -25)
+Expecting:
+    -45
+ok
+Trying:
+    add_integer(60, -10)
+Expecting:
+    50
+ok
+Trying:
+    add_integer(5.2, -7.3)
+Expecting:
+    -2
+ok
+Trying:
+    add_integer(40.5, -20)
+Expecting:
+    -20.5
+**********************************************************************
+File "./tests/0-add_integer.txt", line 34, in 0-add_integer.txt
+Failed example:
+    add_integer(40.5, -20)
+Expected:
+    -20.5
+Got:
+    20
+Trying:
+    add_integer(50, 10.7)
+Expecting:
+    15
+**********************************************************************
+File "./tests/0-add_integer.txt", line 37, in 0-add_integer.txt
+Failed example:
+    add_integer(50, 10.7)
+Expected:
+    15
+Got:
+    60
+**********************************************************************
