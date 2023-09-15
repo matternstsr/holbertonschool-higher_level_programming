@@ -38,4 +38,13 @@ The function - add_integer(a, b=98)
 >>> add_integer(50, 10.7)
 60
 
+
+=====UnSuccessful Functions=====
+
+
+
+
+
+
+
 ===END===
