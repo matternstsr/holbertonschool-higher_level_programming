@@ -39,5 +39,3 @@ The function - add_integer(a, b=98)
 60
 
 ===END===
-
-
