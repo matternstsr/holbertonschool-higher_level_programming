@@ -61,4 +61,11 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
 NameError: name 'none' is not defined
 
+>>> add_integer(none,none)
+Traceback (most recent call last):
+NameError: name 'none' is not defined
+
+
+
+
 ===END===
