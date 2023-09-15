@@ -57,6 +57,8 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
 
->>> add_integer(1000,)
+>>> add_integer(1000,none)
+Traceback (most recent call last):
+NameError: name 'none' is not defined
 
 ===END===
