@@ -3,6 +3,14 @@
 # Matthew Ernst <6628@holbertonstudents.com>
 """Adds two integers: """
 
+"""Returns the sum of adding integers a and b.
+
+    Float casted to int before adding.
+
+    Raises:
+        TypeError: if a or b are not float or int
+"""
+
 
 def add_integer(a, b=98):
     """adds two inegers"""
