@@ -41,6 +41,13 @@ The function - add_integer(a, b=98)
 
 =====UnSuccessful Functions=====
 
+>>> add_integer(3, "Testing")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("Testing", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
 
 
 
