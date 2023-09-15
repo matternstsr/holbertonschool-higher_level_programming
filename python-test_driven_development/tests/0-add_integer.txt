@@ -65,7 +65,8 @@ NameError: name 'none' is not defined
 Traceback (most recent call last):
 NameError: name 'none' is not defined
 
-
-
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
 
 ===END===
