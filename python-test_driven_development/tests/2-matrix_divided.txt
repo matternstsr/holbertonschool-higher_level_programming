@@ -49,6 +49,7 @@ The function - def matrix_divided(matrix, div):
 ... ]
 
 >>> print(matrix_divided(matrix, ))
+Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 
