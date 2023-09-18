@@ -11,13 +11,20 @@ My function- say_my_name(first_name, last_name="")
 
 =====Successful Functions=====
 
+--------Regular Test--------
+
 >>> say_my_name("Matthew", "Ernst")
+My name is Matthew Ernst
+
+--------No First name--------
 
 >>> say_my_name("Ernst")
+My name is Ernst
+
+--------No Last name--------
 
 >>> say_my_name("Matt")
-
-
+My name is Matt
 
 =====UnSuccessful Functions=====
 
@@ -31,7 +38,6 @@ TypeError: last_name must be a string
 
 >>> say_my_name(42, "Ernst")
 Traceback (most recent call last):
-TypeError: say_my_name() missing 1 required positional argument: 'first_name'
-
+TypeError: first_name must be a string
 
 ============END=================
