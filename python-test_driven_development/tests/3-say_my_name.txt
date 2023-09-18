@@ -5,6 +5,30 @@
 How to Use 2-matrix_divided.py
 ==============================
 
-function- say_my_name(first_name, last_name="")
+My function- say_my_name(first_name, last_name="")
 
 >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+=====Successful Functions=====
+
+>>> say_my_name("Matthew", "Ernst")
+
+>>> say_my_name("Ernst")
+
+>>> say_my_name("Matt")
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name("Matt", 42)
+
+>>> say_my_name(42, "Matt")
+
+
+=====UnSuccessful Functions=====
+
+
+
+
+============END=================
