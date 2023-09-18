@@ -59,8 +59,8 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 ...     [2, 4, 6]
 ... ]
 >>> print(matrix_divided(matrix, 1.0))
-
-
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 
