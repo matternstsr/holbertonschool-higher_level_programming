@@ -1,0 +1,68 @@
+
+# matrix must be integers or floats  -	typeerror 
+# each row of matrixs must be same sized  -	typeerror
+# div must be integeror float  -  typeerror
+# div can't be 0  -	zerodividionerror
+# All elements must be divided by div, and rounded to 2 decimalplaces
+# Returns a matrix
+
+
+The function - def matrix_divided(matrix, div):
+
+=====Successful Functions=====
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [3, 6, 9],
+    ...     [12, 15, 18]
+    ... ]
+
+--------Successfull Tests--------
+
+------ REGULAR TEST -------------
+
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+------ Negatives --------------
+
+>>> print(matrix_divided(matrix, -3))
+[[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+
+------infinity FLOATS -------------
+
+>>> print(matrix_divided(matrix, float('inf')))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+------ Floats ----------------
+
+>>> print(matrix_divided(matrix, 0.5))
+[[6.0, 12.0, 18.0], [24.0, 30.0, 36.0]]
+
+---------UnSuccessfull tests -----------
+
+
+
+
+
+
+
+
+
+
+
+=====Unsuccessful Functions=====
+
+
+
+
+
+
+
+
+
+
+
+
+===END===
+
