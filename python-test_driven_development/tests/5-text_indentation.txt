@@ -68,14 +68,18 @@ ere42
 
 =====UnSuccessful Functions=====
 
->>> text_indentation(44)
+>>> text_indentation(42)
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation(str(44.?))
+>>> text_indentation(str(42.?))
 Traceback (most recent call last):
 SyntaxError: invalid syntax
 
->>> text_indentation(str(44.:holberton))
+>>> text_indentation(str(42.:Matt))
 Traceback (most recent call last):
 SyntaxError: invalid syntax
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
