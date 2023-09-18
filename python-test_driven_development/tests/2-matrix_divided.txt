@@ -52,6 +52,16 @@ The function - def matrix_divided(matrix, div):
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
+------Matrix is not int or float
+
+>>> matrix = [
+...     [5, "This is hard", 7],
+...     [2, 4, 6]
+... ]
+>>> print(matrix_divided(matrix, 1.0))
+
+
+
 
 
 
