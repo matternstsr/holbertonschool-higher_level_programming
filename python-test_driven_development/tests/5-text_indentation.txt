@@ -26,7 +26,7 @@ Holberton?
 <BLANKLINE>
 ?
 <BLANKLINE>
-School?
+Hello?
 <BLANKLINE>
 
 >>> text_indentation("Matt?: Are you there?    Hello. Home? !  ")
@@ -47,7 +47,7 @@ Matt:
 <BLANKLINE>
 .
 <BLANKLINE>
-Are you?
+Are you ?
 <BLANKLINE>
 There
 
