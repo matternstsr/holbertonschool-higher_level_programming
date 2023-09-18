@@ -1,0 +1,26 @@
+# 3-say_my_name.txt
+# Matthew Ernst 6628@holbertonstudents.com
+
+==============================
+How to Use 2-matrix_divided.py
+==============================
+
+My function- print_square(size):
+
+>>> print_square = __import__('4-print_square').print_square
+
+=====Successful Functions=====
+
+--------Regular--------
+
+>>> print_square(4)
+
+>>> print_square(2)
+
+>>> print_square(1)
+
+>>> print_square(0)
+
+=====Errors=====
+
+
