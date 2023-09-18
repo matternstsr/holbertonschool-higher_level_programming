@@ -37,6 +37,9 @@ My function- print_square(size):
 Traceback (most recent call last):
 TypeError: size must be an integer
 
+--------Negatives--------
+
+>>> print_square(-100)
 
 
 =====End=====
