@@ -14,13 +14,24 @@ My function- print_square(size):
 --------Regular--------
 
 >>> print_square(4)
+####
+####
+####
+####
 
 >>> print_square(2)
+##
+##
 
 >>> print_square(1)
+#
 
 >>> print_square(0)
+
 
 =====Errors=====
 
 
+
+
+=====End=====
