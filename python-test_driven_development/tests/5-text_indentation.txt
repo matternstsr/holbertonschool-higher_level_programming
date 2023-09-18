@@ -22,7 +22,7 @@ Matt?
 <BLANKLINE>
 :
 <BLANKLINE>
-Holberton?
+Are you there?
 <BLANKLINE>
 ?
 <BLANKLINE>
@@ -63,7 +63,7 @@ e you?
 <BLANKLINE>
 Th:
 <BLANKLINE>
-ere34
+ere42
 
 
 
