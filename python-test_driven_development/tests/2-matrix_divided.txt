@@ -1,21 +1,19 @@
+# 2-matrix_divided.txt
+# Matthew Ernst 6628@holbertonstudents.com
 
-# matrix must be integers or floats  -	typeerror 
-# each row of matrixs must be same sized  -	typeerror
-# div must be integeror float  -  typeerror
-# div can't be 0  -	zerodividionerror
-# All elements must be divided by div, and rounded to 2 decimalplaces
-# Returns a matrix
-
+==============================
+How to Use 2-matrix_divided.py
+==============================
 
 The function - def matrix_divided(matrix, div):
 
 =====Successful Functions=====
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
-    >>> matrix = [
-    ...     [3, 6, 9],
-    ...     [12, 15, 18]
-    ... ]
+>>> matrix = [
+... [3, 6, 9],
+... [12, 15, 18]
+... ]
 
 --------Successfull Tests--------
 
