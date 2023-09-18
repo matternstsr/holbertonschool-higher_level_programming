@@ -4,13 +4,13 @@
 
 def text_indentation(text):
     """prints adouble new line at points: """
-    
+
     if type(text) is not str:
         raise TypeError("text must be a string")
     
     
     sen = ""
-    i = 0
+    a = 0
     while a < len(text):
         if text[a] is not "." and text[a] is not "?" and text[a] is not ":":
             sen += text[a]
