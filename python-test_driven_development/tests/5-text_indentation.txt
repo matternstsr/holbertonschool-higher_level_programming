@@ -66,4 +66,8 @@ Th:
 ere42
 
 
+=====UnSuccessful Functions=====
 
+>>> text_indentation(44)
+    Traceback (most recent call last):
+    TypeError: text must be a string
