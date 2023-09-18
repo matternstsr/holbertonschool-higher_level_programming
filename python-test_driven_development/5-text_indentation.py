@@ -11,7 +11,7 @@ def text_indentation(text):
     sen = ""
     i = 0
     while a < len(text):
-        if text[a] in not "." and text[a] is not "?" and text[a] is not ":":
+        if text[a] is not "." and text[a] is not "?" and text[a] is not ":":
             sen += text[a]
         else:
             sen += text[a]
