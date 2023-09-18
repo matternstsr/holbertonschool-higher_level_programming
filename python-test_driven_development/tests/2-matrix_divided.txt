@@ -52,7 +52,7 @@ The function - def matrix_divided(matrix, div):
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
-------Matrix is not int or float
+------Matrix is not float or int
 
 >>> matrix = [
 ...     [5, "This is hard", 7],
@@ -62,13 +62,13 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-------Division by Zero
+------Divided by Zero
 
 >>> print(matrix_divided(matrix, 0))
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
 
-------Row sizes are different
+------Row size are different
 
 >>> matrix = [
 ...	[1, 2, 3],
@@ -78,6 +78,14 @@ ZeroDivisionError: division by zero
 >>> print(matrix_divided(matrix, 7.8))
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
+
+------div is not float or int
+
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "wuzzup"))
 
 
 
