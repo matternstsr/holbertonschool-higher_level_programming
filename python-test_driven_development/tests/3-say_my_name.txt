@@ -19,12 +19,12 @@ My name is Matthew Ernst
 --------No First name--------
 
 >>> say_my_name("Ernst")
-My name is Ernst
+My name is Ernst 
 
 --------No Last name--------
 
 >>> say_my_name("Matt")
-My name is Matt
+My name is Matt 
 
 =====UnSuccessful Functions=====
 
