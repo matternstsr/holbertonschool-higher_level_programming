@@ -1,0 +1,10 @@
+# 3-say_my_name.txt
+# Matthew Ernst 6628@holbertonstudents.com
+
+==============================
+How to Use 2-matrix_divided.py
+==============================
+
+function- say_my_name(first_name, last_name="")
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
