@@ -1,0 +1,25 @@
+# 5-text_indentation.py
+# Matthew Ernst 6628@holbertonstudents.com
+
+==============================
+How to Use 5-text_indentation.py
+==============================
+
+My function- def text_indentation(...)
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+=====Successful Functions=====
+
+--------Regular--------
+
+>>> text_indentation("Matt?")
+
+>>> text_indentation("Matt?: Are you there?? Hello?  ")
+
+>>> text_indentation("Matt?: Are you there?    Hello. Home? !  ")
+
+>>> text_indentation("Matt:  " + ".Are you ?There")
+
+>>> text_indentation("Matt:  " + ".Ar.e you?Th:ere" + str (42))
+
