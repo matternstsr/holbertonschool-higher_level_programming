@@ -69,5 +69,13 @@ ere42
 =====UnSuccessful Functions=====
 
 >>> text_indentation(44)
-    Traceback (most recent call last):
-    TypeError: text must be a string
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(str(44.?))
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> text_indentation(str(44.:holberton))
+Traceback (most recent call last):
+SyntaxError: invalid syntax
