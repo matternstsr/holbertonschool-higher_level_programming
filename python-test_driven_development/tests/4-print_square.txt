@@ -29,8 +29,13 @@ My function- print_square(size):
 >>> print_square(0)
 
 
-=====Errors=====
+=====UnSuccessfull=====
 
+----------other types-----------
+
+>>> print_square("Wrong Type!")
+Traceback (most recent call last):
+TypeError: size must be an integer
 
 
 
