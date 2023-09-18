@@ -30,5 +30,12 @@ TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 
 
+Correct output - case: “Bob” / “Lenon”
+
+Correct output - case: “Bob”
+
+Correct output - case: “Bob” / 12
+
+Correct output - case: 12 / “Lenon”
 
 ============END=================
