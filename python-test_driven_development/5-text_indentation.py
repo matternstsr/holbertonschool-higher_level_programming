@@ -6,8 +6,7 @@ def text_indentation(text):
     """prints adouble new line at points: """
 
     if type(text) is not str:
-        raise TypeError("text must be a string")
-    
+        raise TypeError("text must be a string")    
     
     sen = ""
     a = 0
@@ -23,4 +22,3 @@ def text_indentation(text):
                 a += 1
         a += 1
     print(sen, end="")
-    
