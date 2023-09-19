@@ -5,20 +5,22 @@
 
 
 class Rectangle:
+    """Define new class"""
     def __init__(self, width=0, height=0):
+        """Initialize new class rectangle"""
         self.width = width
         self.height = height
-        
+
     @property
     def width(self):
         """Retrieves the height of the Rectangle"""
         return self.__width
-    
+
     @property
     def height(self):
         """Retrieves the width of the Rectangle"""
         return self.__height
-    
+
     @width.setter
     def width(self, value):
         """Sets the height of the Rectangle"""
@@ -40,7 +42,7 @@ class Rectangle:
                 raise ValueError("height must be >= 0")
         else:
             raise TypeError("height must be an integer")
-        
+
 """Traceback (most recent call last):
   File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/./1-main.py", line 2, in <module>
     Rectangle = __import__('1-rectangle').Rectangle
