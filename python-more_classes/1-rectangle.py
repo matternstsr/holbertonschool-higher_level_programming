@@ -32,3 +32,11 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.height = value
+
+"""Traceback (most recent call last):
+  File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/./1-main.py", line 2, in <module>
+    Rectangle = __import__('1-rectangle').Rectangle
+  File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/1-rectangle.py", line 22
+    if is not (value, int):
+       ^^
+SyntaxError: invalid syntax"""
