@@ -25,21 +25,24 @@ class TestMaxInteger(unittest.TestCase):
     """testing for max integer"""
 
 def test_empty_list(self):
-"""Tests against an empty list"""
-empty_list = []
-self.assertEqual(max_integer(empty_list), None)
+    """Tests against an empty list"""
+    empty_list = []
+    self.assertEqual(max_integer(empty_list), None)
 
 def test_empty_string(self):
-"""Tests against an empty string"""
-self.assertEqual(max_integer(""), None)
+    """Tests against an empty string"""
+    self.assertEqual(max_integer(""), None)
 
 """----------------------------------------------------------------------
 Ran 0 tests in 0.000s
 OK
 ----------------------------------------------------------------------"""
 def test_sorted_list(self):
-"""Tests against a sorted list"""
+    """Tests against a sorted list"""
+    sorted_list = [4, 5, 6, 7]
+    self.assertEqual(max_integer(sorted_list), 6)
 
 
 
-
+if __name__ == '__main__':
+    unittest.main()
