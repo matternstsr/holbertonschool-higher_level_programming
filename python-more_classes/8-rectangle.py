@@ -68,6 +68,23 @@ class Rectangle:
                 pattern.append("\n")
         return ("".join(pattern))
 
+    def bigger_or_equal(rect_1, rect_2):
+        """Finds the bigger rectangle based on area.
+
+        Args:
+            rect_1 compares first
+            rect_2 compares second
+        Raises:
+            TypeError: If neither are Rectangle.
+        """
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else: return rect_2
+
     def __repr__(self):
         """String rep of rec"""
         return "Rectangle({}, {})".format(str(self.width), str(self.height))
@@ -76,3 +93,4 @@ class Rectangle:
         """Deletes the class rectangle cool but weird"""
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
+
