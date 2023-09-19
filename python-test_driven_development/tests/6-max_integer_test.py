@@ -39,11 +39,15 @@ class TestMaxInteger(unittest.TestCase):
     
     def test_single_element(self):
         """Test with a list containing a single element"""
-        self.assertEqual(max_integer([42]), 42)
+        self.assertEqual(max_integer([80]), 80)
 
     def test_max_dups(self):
         """Test with a list containing duplicate maximum values"""
-        self.assertEqual(max_integer([5, 5, 5, 5]), 5)
+        self.assertEqual(max_integer([9, 9, 9, 9]), 9)
+
+    def test_negative_integers(self):
+        """Test with a list of negative integers"""
+        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
 
         
