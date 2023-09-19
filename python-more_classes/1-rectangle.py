@@ -13,26 +13,30 @@ class Rectangle:
     def width(self):
         return self.__width
     
-    @width.setter
-    def width(self, value):
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
-    
     @property
     def height(self):
         return self.__height
+    
+    @width.setter
+    def width(self, value):
+        if type(value) == int:
+            if value <= 0:
+                self.__width = value
+            else
+                raise TypeError("width must be an integer")
+        else
+            raise ValueError("width must be >= 0")
 
     @height.setter
     def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
+        if type(value) == int:
+            if value <= 0:
+                self.__height = value
+            else
+                raise TypeError("height must be an integer")
+        else
             raise ValueError("height must be >= 0")
-        self.__height = value
-
+        
 """Traceback (most recent call last):
   File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/./1-main.py", line 2, in <module>
     Rectangle = __import__('1-rectangle').Rectangle
