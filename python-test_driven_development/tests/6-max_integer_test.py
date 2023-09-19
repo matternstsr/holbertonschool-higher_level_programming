@@ -23,20 +23,24 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """testing for max integer"""
-
-def test_empty_list(self):
-    """Tests against an empty list"""
-    empty_list = []
-    self.assertEqual(max_integer(empty_list), None)
-
-def test_empty_string(self):
-    """Tests against an empty string"""
-    self.assertEqual(max_integer(""), None)
-
-def test_sorted_list(self):
-    """Tests against a sorted list"""
-    sorted_list = [4, 5, 6, 7]
-    self.assertEqual(max_integer(sorted_list), 6)
     
+    def test_empty_list(self):
+        """Test when the list is empty"""
+        self.assertIsNone(max_integer([]))
+        
+    def test_empty_string(self):
+        """Tests against an empty string"""
+        self.assertEqual(max_integer(""), None)
+        
+    def test_sorted_list(self):
+        """Tests against a sorted list"""
+        sorted_list = [4, 5, 6, 7]
+        self.assertEqual(max_integer(sorted_list), 6)
+    
+    def test_single_element(self):
+        """Test with a list containing a single element"""
+        self.assertEqual(max_integer([42]), 42)
+
+        
 if __name__ == '__main__':
     unittest.main()
