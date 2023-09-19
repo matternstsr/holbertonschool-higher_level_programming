@@ -69,3 +69,5 @@ IndentationError: unindent does not match any outer indentation level"""
   File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/1-rectangle.py", line 22, in width
     if not isinstance(value, int):
 RecursionError: maximum recursion depth exceeded while calling a Python object"""
+"""{'_width': 2, '_height': 4}
+{'_width': 10, '_height': 3}"""
