@@ -93,4 +93,3 @@ class Rectangle:
         """Deletes the class rectangle cool but weird"""
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
-
