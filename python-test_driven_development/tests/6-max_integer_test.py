@@ -24,14 +24,22 @@ max_integer = __import__('6-max_integer').max_integer
 class TestMaxInteger(unittest.TestCase):
     """testing for max integer"""
 
-"""======================================================================
-ERROR: tests (unittest.loader._FailedTest)
-----------------------------------------------------------------------
-ImportError: Failed to import test module: tests
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/unittest/loader.py", line 154, in loadTestsFromName
-    module = __import__(module_name)
-ModuleNotFoundError: No module named 'tests'"""
+def test_empty_list(self):
+"""Tests against an empty list"""
+empty_list = []
+self.assertEqual(max_integer(empty_list), None)
 
-Traceback (most recent call last):
-ModuleNotFoundError: No module named 'tests'"""
+def test_empty_string(self):
+"""Tests against an empty string"""
+self.assertEqual(max_integer(""), None)
+
+"""----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+OK
+----------------------------------------------------------------------"""
+def test_sorted_list(self):
+"""Tests against a sorted list"""
+
+
+
+
