@@ -57,7 +57,9 @@ class TestMaxInteger(unittest.TestCase):
         """Test with a list of mixed positive and negative integers"""
         self.assertEqual(max_integer([-1, 2, -3, 4]), 4)
 
-
+    def test_max_in_middle(self):
+        """Test when maximum value is in the middle"""
+        self.assertEqual(max_integer([1, 2, 3, 2, 1]), 2)
         
 if __name__ == '__main__':
     unittest.main()
