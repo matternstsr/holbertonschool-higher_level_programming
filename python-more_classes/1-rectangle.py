@@ -22,9 +22,9 @@ class Rectangle:
         if type(value) == int:
             if value <= 0:
                 self.__width = value
-            else
+            else:
                 raise TypeError("width must be an integer")
-        else
+        else:
             raise ValueError("width must be >= 0")
 
     @height.setter
@@ -32,9 +32,9 @@ class Rectangle:
         if type(value) == int:
             if value <= 0:
                 self.__height = value
-            else
+            else:
                 raise TypeError("height must be an integer")
-        else
+        else:
             raise ValueError("height must be >= 0")
         
 """Traceback (most recent call last):
