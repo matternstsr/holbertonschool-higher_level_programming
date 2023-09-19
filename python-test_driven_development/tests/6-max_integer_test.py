@@ -59,7 +59,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max_in_middle(self):
         """Test when maximum value is in the middle"""
-        self.assertEqual(max_integer([1, 2, 3, 2, 1]), 2)
+        self.assertEqual(max_integer([1, 2, 3, 2, 1]), 3)
         
 if __name__ == '__main__':
     unittest.main()
