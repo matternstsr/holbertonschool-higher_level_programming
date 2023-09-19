@@ -41,6 +41,13 @@ def test_sorted_list(self):
     """Tests against a sorted list"""
     sorted_list = [4, 5, 6, 7]
     self.assertEqual(max_integer(sorted_list), 6)
+    
+
+def test_neg(self):
+    """tests negative"""
+    self.assertEqual(max_integer([-1, -2, -3]), -1)
+
+
 
 
 
