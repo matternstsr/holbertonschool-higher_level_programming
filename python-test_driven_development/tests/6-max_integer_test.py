@@ -35,7 +35,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_sorted_list(self):
         """Tests against a sorted list"""
         sorted_list = [4, 5, 6, 7]
-        self.assertEqual(max_integer(sorted_list), 6)
+        self.assertEqual(max_integer(sorted_list), 7)
     
     def test_single_element(self):
         """Test with a list containing a single element"""
@@ -49,6 +49,9 @@ class TestMaxInteger(unittest.TestCase):
         """Test with a list of negative integers"""
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
+    def test_positive_integers(self):
+        """Test with a list of positive integers"""
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
         
 if __name__ == '__main__':
