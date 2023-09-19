@@ -64,7 +64,7 @@ class Rectangle:
             if i is not self.__height - 1:
                 pattern.append("\n")
         return ("".join(pattern))
-    
+
     def __repr__(self):
         """String rep of rec"""
         return "Rectangle({}, {})".format(str(self.width), str(self.height))
