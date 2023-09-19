@@ -7,7 +7,7 @@
 class Rectangle:
     """Define new class"""
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         """Initialize new class rectangle"""
         self.width = width
