@@ -85,6 +85,14 @@ class Rectangle:
             return rect_1
         return rect_2
 
+    def square(cls, size=0):
+        """ Creates a new Rectangle (square) with equal w and h.
+
+        Args:
+            size (int): width and height values.
+        """
+        return (cls(size, size))
+
     def __repr__(self):
         """String rep of rec"""
         return "Rectangle({}, {})".format(str(self.width), str(self.height))
