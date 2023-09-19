@@ -25,7 +25,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.width = value
 
-     @height.setter
+    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -47,3 +47,10 @@ SyntaxError: invalid syntax"""
     if is not isinstance(value, int):
        ^^
 SyntaxError: invalid syntax"""
+"""Traceback (most recent call last):
+  File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/./1-main.py", line 2, in <module>
+    Rectangle = __import__('1-rectangle').Rectangle
+  File "/home/matternstsr/holbertonschool-higher_level_programming/python-more_classes/1-rectangle.py", line 28
+    @height.setter
+                  ^
+IndentationError: unindent does not match any outer indentation level"""
