@@ -53,6 +53,11 @@ class TestMaxInteger(unittest.TestCase):
         """Test with a list of positive integers"""
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
+    def test_mixed_integers(self):
+        """Test with a list of mixed positive and negative integers"""
+        self.assertEqual(max_integer([-1, 2, -3, 4]), 4)
+
+
         
 if __name__ == '__main__':
     unittest.main()
