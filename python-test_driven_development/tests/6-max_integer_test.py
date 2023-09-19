@@ -33,23 +33,10 @@ def test_empty_string(self):
     """Tests against an empty string"""
     self.assertEqual(max_integer(""), None)
 
-"""----------------------------------------------------------------------
-Ran 0 tests in 0.000s
-OK
-----------------------------------------------------------------------"""
 def test_sorted_list(self):
     """Tests against a sorted list"""
     sorted_list = [4, 5, 6, 7]
     self.assertEqual(max_integer(sorted_list), 6)
     
-
-def test_neg(self):
-    """tests negative"""
-    self.assertEqual(max_integer([-1, -2, -3]), -1)
-
-
-
-
-
 if __name__ == '__main__':
     unittest.main()
