@@ -64,7 +64,7 @@ class Rectangle:
         pattern = []
         for i in range(self.__height):
             for j in range(self.__width):
-                pattern.append('#')
+                pattern.append(print_symbol)
             if i is not self.__height - 1:
                 pattern.append("\n")
         return ("".join(pattern))
