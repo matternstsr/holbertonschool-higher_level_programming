@@ -16,7 +16,22 @@
 #Your test file should be python files (extension: .py)
 #should be exec using command: python3 -m unittest tests.6-max_integer_test
 #All tests you make must be passable by the function below
-"""tests for 6-max_integer"""
+"""uni-tests for 6-max_integer"""
 
 import unittest
 max_integer = __import__('6-max_integer').max_integer
+
+class TestMaxInteger(unittest.TestCase):
+    """testing for max integer"""
+
+"""======================================================================
+ERROR: tests (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/unittest/loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'tests'"""
+
+Traceback (most recent call last):
+ModuleNotFoundError: No module named 'tests'"""
