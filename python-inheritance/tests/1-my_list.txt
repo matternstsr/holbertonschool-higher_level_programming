@@ -40,5 +40,8 @@ Strings:
 
 =====UnSuccessfull=====
 
+>>> my_list.remove(3)
+>>> print(my_list)
+
 
 =====End=====
