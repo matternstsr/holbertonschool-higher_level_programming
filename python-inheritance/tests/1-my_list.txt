@@ -32,6 +32,10 @@ List Not changed:
 >>> print(my_list)
 [7, 8, 10]
 
+>>> my_list.remove(8)
+>>> print(my_list)
+[7, 10]
+
 Strings:
 >>> my_list = MyList(["Holberton", "Code", "Binary", "Computer"])
 >>> print(my_list)
