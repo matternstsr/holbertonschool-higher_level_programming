@@ -44,6 +44,10 @@ Strings:
 Traceback (most recent call last):
 TypeError: list expected at most 1 argument, got 2
 
+>>> my_list = MyList(["jerk", 200, "meanyhead"])
+>>> my_list.print_sorted()
+TypeError: '<' not supported between instances of 'int' and 'str
+
 =====UnSuccessfull=====
 
 >>> my_list.remove(3)
