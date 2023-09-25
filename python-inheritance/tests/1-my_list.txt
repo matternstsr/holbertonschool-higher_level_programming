@@ -60,6 +60,9 @@ made unsorted list:
 [1, 2, 4, 8, 16]
 
 
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
 
 =====UnSuccessfull=====
 
