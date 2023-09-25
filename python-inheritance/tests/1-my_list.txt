@@ -7,6 +7,8 @@ class MyList that inherits from list
 
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
+>>> type(my_list)
+<class '1-my_list.MyList'>
 
 =====Successful Functions=====
 
