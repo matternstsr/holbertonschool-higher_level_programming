@@ -53,15 +53,15 @@ Strings:
 
 made unsorted list:
 
->>> my_list = MyList([1, 8, 4, 2, 16])
+>>> my_list = MyList([2, 9, 5, 3, 12])
 >>> print(my_list)
-[1, 8, 4, 2, 16]
+[2, 9, 5, 3, 12]
 
 >>> my_list.print_sorted()
-[1, 2, 4, 8, 16]
+[2, 3, 5, 9, 12]
 
 >>> print(my_list)
-[1, 8, 4, 2, 16]
+[2, 9, 5, 3, 12]
 
 >>> my_list = MyList()
 >>> my_list.print_sorted()
