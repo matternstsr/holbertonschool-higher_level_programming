@@ -2,7 +2,7 @@
 # Matthew Ernst 6628@holbertonstudents.com
 
 ==============================
-class MyList that inherits from list
+class MyList that inherits from the list
 ==============================
 
 >>> MyList = __import__('1-my_list').MyList
@@ -47,13 +47,6 @@ Strings:
 
 >>> my_list.print_sorted()
 ['Binary', 'Code', 'Computer', 'Holberton']
-
->>> my_list = MyList()
->>> my_list.append(2)
->>> my_list.append(1)
->>> my_list.append(3)
->>> print(my_list)
-[2, 1, 3]
 
 made unsorted list:
 
