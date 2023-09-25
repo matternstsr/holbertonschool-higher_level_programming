@@ -35,6 +35,8 @@ Strings:
 >>> print(my_list)
 ['Holberton', 'Code', 'Binary', 'Computer']
 
+>>> my_list.print_sorted()
+['Binary', 'Code', 'Computer', 'Holberton']
 
 =====UnSuccessfull=====
 
