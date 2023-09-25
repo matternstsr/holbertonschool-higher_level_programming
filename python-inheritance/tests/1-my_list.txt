@@ -38,10 +38,12 @@ Strings:
 >>> my_list.print_sorted()
 ['Binary', 'Code', 'Computer', 'Holberton']
 
+
+
 =====UnSuccessfull=====
 
 >>> my_list.remove(3)
->>> print(my_list)
-
+Traceback (most recent call last):
+ValueError: list.remove(x): x not in list
 
 =====End=====
