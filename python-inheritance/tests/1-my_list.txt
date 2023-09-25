@@ -1,0 +1,42 @@
+# 1-my_list.py
+# Matthew Ernst 6628@holbertonstudents.com
+
+==============================
+class MyList that inherits from list
+==============================
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+
+=====Successful Functions=====
+
+--------Regular--------
+
+Empty:
+>>> print(my_list)
+[]
+
+Single:
+>>> my_list = MyList([7, 8, 9])
+>>> print(my_list)
+[7, 8, 9]
+
+Index:
+>>> my_list[2] = 10
+>>> print(my_list)
+[7, 8, 10]
+
+List Not changed:
+>>> print(my_list)
+[7, 8, 10]
+
+Strings:
+>>> my_list = MyList(["Holberton", "Code", "Binary", "Computer"])
+>>> print(my_list)
+['Holberton', 'Code', 'Binary', 'Computer']
+
+
+=====UnSuccessfull=====
+
+
+=====End=====
