@@ -40,6 +40,9 @@ Strings:
 >>> my_list.print_sorted()
 ['Binary', 'Code', 'Computer', 'Holberton']
 
+>>> my_list = MyList([1, 2], [3, 4])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 2
 
 =====UnSuccessfull=====
 
@@ -47,8 +50,16 @@ Strings:
 Traceback (most recent call last):
 ValueError: list.remove(x): x not in list
 
+
+
+
+didnt matter:
+
 >>> my_list = MyList(None)
 Traceback (most recent call last):
 TypeError: 'NoneType' object is not iterable
+
+
+
 
 =====End=====
