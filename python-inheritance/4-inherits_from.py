@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 3-is_same_class.py
+# 4-is_same_class.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Checks the class"""
 
