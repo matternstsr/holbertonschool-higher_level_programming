@@ -14,7 +14,8 @@ class BaseGeometry:
         pass
         """that validates value"""
         if value is not type(int):
-            raise Exception ({} "must be an integer")
+            raise Exception ("{} must be an integer".format(name))
         if value <= 0:
-            raise Exception ({} "must be greater than 0")
+            raise Exception ("{} must be greater than 0".format(name))
+
         
