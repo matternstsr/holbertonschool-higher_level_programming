@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # 7-save_to_json_file.py
 # Matthew Ernst 6628@holbertonstudents.com
-"""comment"""
+"""Adds arguments to existing list and saves to json file"""
 import sys
 import json
 
@@ -16,4 +16,3 @@ if __name__ == "__main__":
         new_list = []
     new_list.extend(sys.argv[1:])
     save_to_json_file(new_list, "add_item.json")
-    
