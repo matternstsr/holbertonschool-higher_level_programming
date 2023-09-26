@@ -48,6 +48,10 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 Traceback (most recent call last):
 TypeError: BaseGeometry() takes no arguments
 
+>>> base_geometry.integer_validator("allinvalid", None)
+Traceback (most recent call last):
+TypeError: allinvalid must be an integer
+
 ------Value is <= 0------
 
 >>> base_geometry.integer_validator("bob", -12)
