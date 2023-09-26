@@ -20,17 +20,15 @@ if [ $? -eq 0 ]; then
     echo "'$message' Commit message was used on GitHub repo '$repository_name'"
     echo "Changes were made to the following files:"
     echo "$committed_files"
+    sleep 8
     
 # Display the changes made to each committed file
     for file in $committed_files; do
         echo "Changes in '$file':"
         git diff HEAD^..HEAD "$file"
         echo
-        echo "stoppd here"
     done
-    echo "stoppd here too"
-
-
+    
     sleep 8
     clear
 else
