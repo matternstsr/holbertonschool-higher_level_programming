@@ -24,12 +24,12 @@ import sys
 """import json???"""
 
 
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+save_json = __import__('7-save_to_json_file').save_to_json_file
+get_json = __import__('8-load_from_json_file').load_from_json_file
 
 try:
-    items = load_from_json_file('add_item.json')
+    items = get_json('add_item.json')
 except FileNotFoundError:
     items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, 'add_item.json')
+items.extend(sys.argv[1:])
+save_json(items, 'add_item.json')
