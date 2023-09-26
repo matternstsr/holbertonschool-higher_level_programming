@@ -7,11 +7,12 @@ git add .
 git commit -m "$message"
 git push
 if [ $? -eq 0 ]; then
-sleep 20
+sleep 3
     clear
     echo "That worked master! Too bad that you suck at coding! "$message" was added to github repo"
-    sleep 20
+    sleep 3
+    clear
 else
     echo "That didn't work stupid! see you suck at everything!"
-    sleep 20
+    sleep 3
 fi
