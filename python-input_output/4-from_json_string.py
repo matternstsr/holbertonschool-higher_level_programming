@@ -5,9 +5,7 @@
 (Python data structure) represented by a JSON string
 Prototype: def from_json_string(my_str).
 You don’t need to manage exceptions if the JSON string doesn’t
-represent an object."""
-
-""" Returns the JSON of the file """
+represent an object. Returns the JSON of the file """
 
 import json
 
