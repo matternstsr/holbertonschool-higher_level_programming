@@ -14,6 +14,11 @@ integer_validator(self, name, value)
 
 >>> BG.integer_validator("notaninteger!", 12)
 
+>>> BG.integer_validator("notaninteger!", "notaninteger!")
+
+>>> BG.integer_validator()
+
+>>> BG.integer_validator(None)
 
 
 =====UnSuccessfull=====
