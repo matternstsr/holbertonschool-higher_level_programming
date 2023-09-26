@@ -13,5 +13,5 @@ You are not allowed to import any module"""
 
 def write_file(filename="", text=""):
     """write a string to the file"""
-    with open(filename, mode="r", encoding="utf-8") as doittoit:
+    with open(filename, mode="w", encoding="utf-8") as doittoit:
         return doittoit.write(text)
