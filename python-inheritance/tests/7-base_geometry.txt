@@ -23,6 +23,7 @@ integer_validator(self, name, value)
 >>> BG.integer_validator(None)
 
 >>> BG.integer_validator(-11, -12)
+[-11, -12]
 
 =====UnSuccessfull=====
 
