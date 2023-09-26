@@ -23,11 +23,10 @@ if [ $? -eq 0 ]; then
     sleep 8
     clear
     
-# Display the changes made to each committed file
+ # Display the changes made to each committed file using 'less' for paging
     for file in $committed_files; do
         echo "Changes in '$file':"
-        git diff HEAD^..HEAD "$file"
-        echo
+        git diff HEAD^..HEAD "$file" | less
     done
     
     sleep 10
