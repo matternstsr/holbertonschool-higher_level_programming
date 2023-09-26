@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 # 1-my_list.py
 # Matthew Ernst 6628@holbertonstudents.com
-"""Write a function that returns an object (Python data structure)
-represented by a JSON string:
-Prototype: def from_json_string(my_str):You don’t need to manage exceptions
-if the JSON string doesn’t represent an object."""
+"""Write a function that returns an object
+(Python data structure) represented by a JSON string
+Prototype: def from_json_string(my_str).
+You don’t need to manage exceptions if the JSON string doesn’t
+represent an object."""
 
 """ Returns the JSON of the file """
 
