@@ -30,6 +30,7 @@ if [ $? -eq 0 ]; then
     done
     echo "stoppd here too"
 
+
     sleep 8
     clear
 else
