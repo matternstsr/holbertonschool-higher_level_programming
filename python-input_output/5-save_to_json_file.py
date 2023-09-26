@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 1-my_list.py
+# 5-save_to_json_file.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Write a function that writes an Object to a text file, using a JSON
 representation:
@@ -15,5 +15,4 @@ import json
 def save_to_json_file(my_obj, filename):
     """ Saves sjon to specified filename"""
     with open(filename, mode="w", encoding="utf-8") as doittoit:
-        return json.dumps(my_obj)
-
+        json.dumps(my_obj, doittoit)
