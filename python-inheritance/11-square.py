@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# 8-rectangle.py
+# 11-rectangle.py
 # Matthew Ernst 6628@holbertonstudents.com
-"""makes an empty class BaseGeometry"""
+"""makes a rectangle BaseGeometry"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
