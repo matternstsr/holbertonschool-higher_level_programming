@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 # 7-save_to_json_file.py
 # Matthew Ernst 6628@holbertonstudents.com
-"""Adds arguments to existing list and saves to json file"""
-"""Write a script that adds all arguments to a Python list, and then save them
+"""Adds arguments to existing list and saves to json file
+Write a script that adds all arguments to a Python list, and then save them
 to a file:
 You must use your function save_to_json_file from 5-save_to_json_file.py
 You must use your function load_from_json_file from 6-load_from_json_file.py
 The list must be saved as a JSON representation in a file named add_item.json
 If the file doesn’t exist, it should be created
-You don’t need to manage file permissions / exceptions."""
-"""remember! argv[] is the name!!!!! """
-"""items.extend(sys.argv[1:]): This code extends the items list with all the
+You don’t need to manage file permissions / exceptions.
+remember! argv[] is the name!!!!!
+items.extend(sys.argv[1:]): This code extends the items list with all the
 command-line arguments passed to the script, starting from the first argument
 (index 1) to the end of the list. It treats sys.argv[1:] as an iterable and
 adds all elements from that iterable to the items list. This is what you
