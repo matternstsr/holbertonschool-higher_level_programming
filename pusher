@@ -9,6 +9,7 @@ export GIT_PAGER=""
 chmod -R 755 .
 clear
 read -p "What would you like to post as your commit message? :: " message
+clear
 git add .
 git commit -m "$message"
 repository_url=$(git remote get-url origin)  
