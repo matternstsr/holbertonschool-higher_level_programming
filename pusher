@@ -5,7 +5,7 @@ positive_messages=("You're the best programmer at Holberton!" "You're a coding s
 
 chmod -R 755 .
 clear
-read -p "What would you like me to post for this GitHub commit message? :: " message
+read -p "What would you like me to post master? :: " message
 git add .
 git commit -m "$message"
 repository_url=$(git remote get-url origin)  
@@ -28,7 +28,7 @@ if [ $? -eq 0 ]; then
     # Display the changes made to each committed file
     for file in $committed_files; do
         echo "Changes in '$file':"
-        git diff HEAD^..HEAD "$file"
+        git diff --no-pager HEAD^..HEAD "$file"
         echo
     done
     
@@ -37,5 +37,5 @@ if [ $? -eq 0 ]; then
     read -n 1 -s -r -p "Press any key to continue..."
     clear
 else
-    echo "Something went wrong, You can do it!"
+    echo "That didn't work stupid! see you suck at everything!"
 fi
