@@ -3,6 +3,9 @@
 # List of 20 positive messages
 positive_messages=("You're the best programmer at Holberton!" "You're a coding superstar!" "Your code skills are unmatched!" "Holberton's finest programmer!" "A coding genius at work!" "Top-notch programmer at Holberton!" "You're the coding wizard!" "Holberton's pride in programming!" "A programming legend in the making!" "Coding excellence at its best!" "Holberton's coding champion!" "You make Holberton proud!" "Code like a pro, like you always do!" "You're setting the coding bar high!" "Holberton's coding prodigy!" "Your code is a work of art!" "Coding perfection in action!" "Holberton's programming guru!" "Keep coding, you're a star!" "You're a coding inspiration!")
 
+# Set GIT_PAGER to an empty string to disable the pager
+export GIT_PAGER=""
+
 chmod -R 755 .
 clear
 read -p "What would you like me to post master? :: " message
@@ -28,7 +31,7 @@ if [ $? -eq 0 ]; then
     # Display the changes made to each committed file
     for file in $committed_files; do
         echo "Changes in '$file':"
-        git diff --no-pager HEAD^..HEAD -- "$file"
+        git diff HEAD^..HEAD -- "$file"
         echo
     done
     
