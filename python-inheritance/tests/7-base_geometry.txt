@@ -68,4 +68,10 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 TypeError: notaninteger must be an integer
 
+------Lists?------
+
+>>> base_geometry.integer_validator("itsalist", [1])
+Traceback (most recent call last):
+TypeError: itsalist must be an integer
+
 =====End=====
