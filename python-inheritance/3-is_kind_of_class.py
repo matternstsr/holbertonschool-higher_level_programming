@@ -4,7 +4,7 @@
 """Checks the class"""
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """Checks if it is inhertited or instance same class.
 
     Returns:
