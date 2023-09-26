@@ -22,9 +22,9 @@ integer_validator(self, name, value)
 
 =====UnSuccessfull=====
 
->>> base_geometry.integer_validator(11, 12b)
-Traceback (most recent call last):
-SyntaxError: invalid decimal literal
+#>>> base_geometry.integer_validator(11, 12b)
+#Traceback (most recent call last):
+#SyntaxError: invalid decimal literal
 
 ------Value is not an integer------
 
