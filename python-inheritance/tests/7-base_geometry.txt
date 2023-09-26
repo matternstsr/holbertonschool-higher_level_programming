@@ -1,96 +1,14 @@
+# 7-is_same_class.py
 # Matthew Ernst 6628@holbertonstudents.com
 
 ==============================
-class MyList that inherits from list
+class BaseGeometry
 ==============================
-
->>> MyList = __import__('1-my_list').MyList
->>> my_list = MyList()
->>> type(my_list)
-<class '1-my_list.MyList'>
 
 =====Successful Functions=====
 
 --------Regular--------
-Empty:
-
->>> print(my_list)
-[]
-
-Single:
->>> my_list = MyList([7, 8, 9])
->>> print(my_list)
-[7, 8, 9]
-
-Index:
->>> my_list[2] = 10
->>> print(my_list)
-[7, 8, 10]
-
-List Not changed:
->>> print(my_list)
-[7, 8, 10]
-
->>> my_list.remove(8)
->>> print(my_list)
-[7, 10]
-
-Strings:
-
->>> my_list = MyList(["Holberton", "Code", "Binary", "Computer"])
->>> print(my_list)
-['Holberton', 'Code', 'Binary', 'Computer']
-
->>> my_list.print_sorted()
-['Binary', 'Code', 'Computer', 'Holberton']
-
->>> my_list = MyList()
->>> my_list.append(2)
->>> my_list.append(1)
->>> my_list.append(3)
->>> print(my_list)
-[2, 1, 3]
-
-made unsorted list:
-
->>> my_list = MyList([2, 9, 5, 3, 12])
->>> print(my_list)
-[2, 9, 5, 3, 12]
-
->>> my_list.print_sorted()
-[2, 3, 5, 9, 12]
-
->>> print(my_list)
-[2, 9, 5, 3, 12]
-
->>> my_list = MyList()
->>> my_list.print_sorted()
-[]
 
 =====UnSuccessfull=====
-
->>> my_list = MyList([1, 2], [3, 4])
-Traceback (most recent call last):
-TypeError: list expected at most 1 argument, got 2
-
->>> my_list = MyList(["jerk", 200, "meanyhead"])
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: '<' not supported between instances of 'int' and 'str'
-
->>> my_list.remove(3)
-Traceback (most recent call last):
-ValueError: list.remove(x): x not in list
-
-didnt matter:
-
->>> my_list = MyList(None)
-Traceback (most recent call last):
-TypeError: 'NoneType' object is not iterable
-
->>> my_list = MyList([1, 2, 3])
->>> my_list.print_sorted(1)
-Traceback (most recent call last):
-TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 =====End=====
