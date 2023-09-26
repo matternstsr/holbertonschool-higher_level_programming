@@ -12,6 +12,6 @@ import json
 
 
 def load_from_json_file(filename):
-    """ creates an Object from a “JSON file”"""
-    with open(filename, mode="w", encoding="utf-8") as doittoit:
+    """ creates an Object from a JSON file"""
+    with open(filename) as doittoit:
         return json.load(doittoit)
