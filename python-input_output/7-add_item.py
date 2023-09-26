@@ -11,8 +11,12 @@ You don’t need to manage file permissions / exceptions."""
 
 import json
 
+save_json = __import__('7-save_to_json_file').save_to_json_file
+get_json = __import__('8-load_from_json_file').load_from_json_file
 
-def load_from_json_file(filename):
-    """ creates an Object from a JSON file"""
-    with open(filename) as doittoit:
-        return json.load(doittoit)
+try:
+    items = get_json('add_item.json')
+except FileNotFoundError:
+    items = []
+    items.extend(sys.argv[])
+    save_json(items, 'add_item.json')
