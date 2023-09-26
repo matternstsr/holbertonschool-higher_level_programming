@@ -8,5 +8,5 @@ class BaseGeometry:
     """ Empty class BaseGeometry"""
 
 def area(self):
-        """returns the area"""
+        """returns the area if implimented"""
         raise Exception("area() is not implemented")
