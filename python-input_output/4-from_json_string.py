@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 1-my_list.py
+# 4-from_json_string.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Write a function that returns an object
 (Python data structure) represented by a JSON string

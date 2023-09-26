@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 1-my_list.py
+# 3-to_json_string.py
 # Matthew Ernst 6628@holbertonstudents.com
 """ Returns the JSON of the file """
 import json

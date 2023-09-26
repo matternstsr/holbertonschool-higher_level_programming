@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 1-my_list.py
+# 2-append_write.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Write a function that appends a string at the end of a text file (UTF8)
 and returns the number of characters added:
