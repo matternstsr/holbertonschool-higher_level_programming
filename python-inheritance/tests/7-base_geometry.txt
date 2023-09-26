@@ -16,7 +16,7 @@ integer_validator(self, name, value)
 #>>> base_geometry.integer_validator(11, 12)
 
 
-#>>> base_geometry.integer_validator("notaninteger", 12)
+>>> base_geometry.integer_validator("notaninteger", 12)
 
 
 
