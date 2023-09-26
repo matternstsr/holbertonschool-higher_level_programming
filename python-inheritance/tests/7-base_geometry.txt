@@ -2,12 +2,19 @@
 # Matthew Ernst 6628@holbertonstudents.com
 
 ==============================
-class BaseGeometry
+integer_validator(self, name, value)
 ==============================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BG = BaseGeometry()
 
 =====Successful Functions=====
 
 --------Regular--------
+
+>>> bg.integer_validator("notaninteger!", 12)
+
+
 
 =====UnSuccessfull=====
 
