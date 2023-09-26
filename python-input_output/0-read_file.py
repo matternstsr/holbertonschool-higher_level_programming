@@ -7,12 +7,13 @@ Prototype: def read_file(filename=""):
 You must use the with statement
 You don’t need to manage file permission or file doesn't exist exceptions.
 You are not allowed to import any module"""
+
 """The with statement in Python is used to wrap the execution of a block of
 code with methods defined by a context manager. In the case of file I/O
 operations, it provides a way to ensure that a file is closed when the block
 inside the with statement is exited, regardless of how the block is exited .
 
-In the code you provided, the with statement is used to open the file
+The with statement is used to open the file
 specified by the filename parameter and read its contents using the utf-8
 encoding. The with statement automatically closes the file after its
 contents have been read .
