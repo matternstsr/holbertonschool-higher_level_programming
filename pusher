@@ -26,7 +26,9 @@ if [ $? -eq 0 ]; then
         echo "Changes in '$file':"
         git diff HEAD^..HEAD "$file"
         echo
+        echo "stoppd here"
     done
+    echo "stoppd here too"
 
     sleep 8
     clear
