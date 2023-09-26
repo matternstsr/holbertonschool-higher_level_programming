@@ -20,6 +20,7 @@ if [ $? -eq 0 ]; then
     # Get the list of files that were committed
     committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
     
+    sleep 5
     clear
     # Display a random positive message
     random_index=$((RANDOM % ${#positive_messages[@]}))
@@ -38,7 +39,7 @@ if [ $? -eq 0 ]; then
         echo
     done
     
-    sleep 5
+    sleep 10
     clear
 
     echo "Changes saved to corresponding files: ${committed_files}_changes.txt"
