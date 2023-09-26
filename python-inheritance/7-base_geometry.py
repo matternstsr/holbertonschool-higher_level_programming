@@ -16,4 +16,5 @@ class BaseGeometry:
         if value is not type(int):
             raise Exception ({} "must be an integer")
         if value <= 0:
-            raise Exception ({} "must be an integer")
+            raise Exception ({} "must be greater than 0")
+        
