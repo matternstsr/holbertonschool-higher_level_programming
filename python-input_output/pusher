@@ -1,0 +1,13 @@
+#!/bin/bash
+
+chmod -R 755 .
+read -p "Enter commit message: " message
+git add .
+git commit -m "$message"
+git push
+
+if [ $? -eq 0 ]; then
+    clear
+else
+    echo "That didn't work stupid!"
+fi
