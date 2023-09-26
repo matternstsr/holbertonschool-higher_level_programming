@@ -12,5 +12,5 @@ You are not allowed to import any module"""
 
 def append_write(filename="", text=""):
     """write a string to the file"""
-    with open(filename, mode="w+x", encoding="utf-8") as doittoit:
+    with open(filename, mode="xw+", encoding="utf-8") as doittoit:
         return doittoit.write(text)
