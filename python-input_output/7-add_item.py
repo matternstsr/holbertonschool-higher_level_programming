@@ -21,15 +21,17 @@ not an iterable of strings. It would result in a TypeError because you cannot
 directly extend a list with a single string"""
 
 import sys
+import json
+
 """import json???"""
 
-if __name__ == "__main__":
+
 save_json = __import__('7-save_to_json_file').save_to_json_file
 get_json = __import__('8-load_from_json_file').load_from_json_file
 
 try:
-    items = get_json('add_item.json')
+    items = get_json("add_item.json")
 except FileNotFoundError:
     items = []
 items.extend(sys.argv[1:])
-save_json(items, 'add_item.json')
+save_json(items, "add_item.json")
