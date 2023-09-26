@@ -10,3 +10,4 @@ def inherits_from(obj, a_class):
         return False
     else:
         return False
+    
