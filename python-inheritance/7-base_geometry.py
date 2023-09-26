@@ -11,6 +11,7 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
     
     def integer_validator(self, name, value):
-        """that validates value"""
-        if value is not type(int):
-            raise Exception (<name> "must be an integer")
+        pass
+#        """that validates value"""
+#        if value is not type(int):
+#            raise Exception (<name> "must be an integer")
