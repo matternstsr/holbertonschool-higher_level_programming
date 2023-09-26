@@ -5,11 +5,22 @@ clear
 read -p "What would you like me to post master? :: " message
 git add .
 git commit -m "$message"
+repository_url=$(git remote get-url origin)  
+# Get the repository URL
+repository_name=$(basename "$repository_url" .git)  
+# Extract the repository name from the URL
 git push
 if [ $? -eq 0 ]; then
-sleep 3
+    # Get the list of files that were committed
+    committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
+    
+    sleep 3
     clear
-    echo "That worked master! Too bad that you suck at coding! "$message" was added to github repo"
+    echo "That worked master!     Too bad that you suck at coding!"
+    echo "'$message' Commit message was used on GitHub repo '$repository_name'"
+    echo "Changes were made to the following files:"
+    echo "$committed_files"
+    
     sleep 3
     clear
 else
