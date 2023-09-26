@@ -17,15 +17,21 @@ integer_validator(self, name, value)
 
 >>> BG.integer_validator("notaninteger!", 12)
 
+=====UnSuccessfull=====
+
 ------Value is not an integer------
 
 >>> BG.integer_validator("notaninteger!", "notaninteger!")
 Traceback (most recent call last):
 TypeError: notaninteger! must be an integer
 
+------not enough args------
+
 >>> BG.integer_validator()
 Traceback (most recent call last):
 TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+------Value is missing------
 
 >>> BG.integer_validator(None)
 Traceback (most recent call last):
@@ -40,7 +46,5 @@ ValueError: -11 must be greater than 0
 >>> BG.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
-
-=====UnSuccessfull=====
 
 =====End=====
