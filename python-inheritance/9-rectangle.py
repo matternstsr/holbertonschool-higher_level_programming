@@ -26,4 +26,4 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """print() should print, and str() should return
         the following rectangle description: [Rectangle] <width>/<height>"""
-        return "[Rectangle] {i}/{i}".format(self.__width, self.__height)
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
