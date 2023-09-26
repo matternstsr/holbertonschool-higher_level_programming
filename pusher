@@ -28,6 +28,9 @@ if [ $? -eq 0 ]; then
     done
     
     echo "Changes saved to corresponding files: ${committed_files}_changes.txt"
+    
+    read -n 1 -s -r -p "Press any key to continue..."
+    clear
 else
     echo "That didn't work stupid! see you suck at everything!"
 fi
