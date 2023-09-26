@@ -17,6 +17,8 @@ integer_validator(self, name, value)
 
 >>> BG.integer_validator("notaninteger!", 12)
 
+
+
 =====UnSuccessfull=====
 
 ------Value is not an integer------
@@ -46,5 +48,9 @@ ValueError: -11 must be greater than 0
 >>> BG.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> BG.integer_validator("age", False)
+Traceback (most recent call last):
+TypeError: age must be an integer
 
 =====End=====
