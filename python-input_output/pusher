@@ -25,14 +25,14 @@ if [ $? -eq 0 ]; then
     
     # Display the changes made to each committed file and save to a text file
     for file in $committed_files; do
-        echo "Changes in '$file':" > "${file}_changes.txt"
-        git diff HEAD^..HEAD "$file" >> "${file}_changes.txt"
-        echo >> "${file}_changes.txt"
+        changes_filename="${file}_changes.txt"
+        echo "Changes in '$file':" > "$changes_filename"
+        git diff HEAD^..HEAD "$file" >> "$changes_filename"
+        echo >> "$changes_filename"
     done
-    sleep 5
-
-    echo "Changes saved to files: $committed_files"
-
+    
+    echo "Changes saved to corresponding files: ${committed_files}_changes.txt"
+    
     sleep 5
     clear
 else

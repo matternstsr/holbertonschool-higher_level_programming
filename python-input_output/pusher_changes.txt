@@ -1,0 +1,19 @@
+Changes in 'python-input_output/pusher':
+diff --git a/python-input_output/pusher b/python-input_output/pusher
+index 12510a8..df94b29 100755
+--- a/python-input_output/pusher
++++ b/python-input_output/pusher
+@@ -25,9 +25,9 @@ if [ $? -eq 0 ]; then
+     
+     # Display the changes made to each committed file and save to a text file
+     for file in $committed_files; do
+-        echo "Changes in '$file':" > "$file_changes.txt"
+-        git diff HEAD^..HEAD "$file" >> "$file_changes.txt"
+-        echo >> "$file_changes.txt"
++        echo "Changes in '$file':" > "${file}_changes.txt"
++        git diff HEAD^..HEAD "$file" >> "${file}_changes.txt"
++        echo >> "${file}_changes.txt"
+     done
+     sleep 5
+ 
+
