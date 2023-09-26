@@ -25,7 +25,14 @@ if [ $? -eq 0 ]; then
     clear
     # Display a random positive message
     random_index=$((RANDOM % ${#positive_messages[@]}))
+    echo
+    echo
+    echo   
     echo "${positive_messages[$random_index]}"
+    echo
+    echo
+    echo
+    echo
     echo "'$message' Commit message was used on GitHub repo '$repository_name'"
     echo "Changes were made to the following files:"
     echo "$committed_files"
@@ -40,7 +47,6 @@ if [ $? -eq 0 ]; then
         echo
     done
     
-    sleep 10
     read -n 1 -s -r -p "Press any key to continue..."
     clear
 else
