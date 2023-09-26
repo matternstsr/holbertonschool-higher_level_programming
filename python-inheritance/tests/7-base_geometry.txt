@@ -12,6 +12,8 @@ integer_validator(self, name, value)
 
 --------Regular--------
 
+>>> BG.integer_validator(11, 12)
+
 >>> BG.integer_validator("notaninteger!", 12)
 
 >>> BG.integer_validator("notaninteger!", "notaninteger!")
@@ -20,6 +22,7 @@ integer_validator(self, name, value)
 
 >>> BG.integer_validator(None)
 
+>>> BG.integer_validator(-11, -12)
 
 =====UnSuccessfull=====
 
