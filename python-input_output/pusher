@@ -8,6 +8,7 @@ git push
 
 if [ $? -eq 0 ]; then
     clear
+    echo "That worked master!"
 else
     echo "That didn't work stupid!"
 fi
