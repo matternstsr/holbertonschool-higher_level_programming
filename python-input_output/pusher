@@ -6,11 +6,12 @@ read -p "What would you like me to post master? :: " message
 git add .
 git commit -m "$message"
 git push
-if true 
-then Sleep 2
 if [ $? -eq 0 ]; then
+Sleep2
     clear
     echo "That worked master! Too bad that you suck at coding! "$message" was added to github repo"
+    Sleep2
 else
     echo "That didn't work stupid! see you suck at everything!"
+    Sleep2
 fi
