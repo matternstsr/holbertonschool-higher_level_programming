@@ -1,15 +1,14 @@
 # 7-is_same_class.py
 # Matthew Ernst 6628@holbertonstudents.com
 
-
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> base_geometry = BaseGeometry()
-
-==============================
+=============================
 integer_validator(self, name, value)
 ==============================
 
 =====Successful Functions=====
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> base_geometry = BaseGeometry()
 
 --------Regular--------
 
