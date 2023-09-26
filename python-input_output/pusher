@@ -23,12 +23,11 @@ if [ $? -eq 0 ]; then
     sleep 8
     clear
     
-    # Display the changes made to each committed file and save to a text file
+    # Display the changes made to each committed file
     for file in $committed_files; do
-        changes_filename="${file}_changes.txt"
-        echo "Changes in '$file':" > "$changes_filename"
-        git diff HEAD^..HEAD "$file" >> "$changes_filename"
-        echo >> "$changes_filename"
+        echo "Changes in '$file':"
+        git diff HEAD^..HEAD "$file"
+        echo
     done
     
     echo "Changes saved to corresponding files: ${committed_files}_changes.txt"
