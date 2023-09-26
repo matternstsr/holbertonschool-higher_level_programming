@@ -185,4 +185,4 @@ items.extend(sys.argv[1]): This code attempts to extend the items list with a
 single element, which is the first command-line argument (at index 1) as a
 whole. This will not work as intended because sys.argv[1] is a single string,
 not an iterable of strings. It would result in a TypeError because you cannot
-directly extend a list with a single string"""
+directl
