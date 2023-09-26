@@ -27,7 +27,10 @@ if [ $? -eq 0 ]; then
     echo "'$message' Commit message was used on GitHub repo '$repository_name'"
     echo "Changes were made to the following files:"
     echo "$committed_files"
-    
+
+    sleep 5
+    clear
+
     # Display the changes made to each committed file
     for file in $committed_files; do
         echo "Changes in '$file':"
@@ -35,10 +38,13 @@ if [ $? -eq 0 ]; then
         echo
     done
     
+    sleep 5
+    clear
+
     echo "Changes saved to corresponding files: ${committed_files}_changes.txt"
     
     read -n 1 -s -r -p "Press any key to continue..."
     clear
 else
-    echo "That didn't work stupid! see you suck at everything!"
+    echo "OOPS! That didnt work try again, You got this!"
 fi
