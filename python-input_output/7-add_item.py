@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # 7-save_to_json_file.py
 # Matthew Ernst 6628@holbertonstudents.com
+"""comment"""
 import sys
 import json
 
