@@ -8,6 +8,7 @@ You must use your function load_from_json_file from 6-load_from_json_file.py
 The list must be saved as a JSON representation in a file named add_item.json
 If the file doesn’t exist, it should be created
 You don’t need to manage file permissions / exceptions."""
+"""remember! argv[] is the name!!!!! """
 
 import json
 import sys
@@ -19,5 +20,5 @@ try:
     items = get_json('add_item.json')
 except FileNotFoundError:
     items = []
-    items.extend(sys.argv[])
+    items.extend(sys.argv[1])
     save_json(items, 'add_item.json')
