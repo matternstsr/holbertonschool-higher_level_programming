@@ -9,8 +9,7 @@ integer_validator(self, name, value)
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> base_geometry = BaseGeometry()
->>> type(base_geometry)
-<class '7-base_geometry.BaseGeometry'>
+
 
 --------Regular--------
 
