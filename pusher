@@ -43,7 +43,7 @@ if [ $? -eq 0 ]; then
     sleep 10
     clear
 
-    echo "Changes saved to corresponding files: ${committed_files}_changes.txt"
+    echo "Changes saved to corresponding files: ${committed_files}"
     
     read -n 1 -s -r -p "Press any key to continue..."
     clear
