@@ -21,6 +21,7 @@ You don’t need to manage file permission or file doesn’t exist exceptions
 because the open() function will raise an exception if it fails to open the 
 file ."""
 
+
 def read_file(filename=""):
     """defines read file"""
     with open(filename, encoding="utf-8") as DaFile:
