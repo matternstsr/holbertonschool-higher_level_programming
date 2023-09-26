@@ -46,9 +46,9 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 
 ------Value is <= 0------
 
->>> base_geometry.integer_validator(-11, -12)
+>>> base_geometry.integer_validator("bob", -12)
 Traceback (most recent call last):
-ValueError: -11 must be greater than 0
+ValueError: bob must be greater than 0
 
 ------Area------
 
