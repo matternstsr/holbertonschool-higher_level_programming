@@ -1,11 +1,36 @@
-cmod u + x *
-echo "Enter your commit message: "
-read message
+#!/bin/bash
 
-new_message=$(echo $message | tr ' ' '_')
-
+chmod -R 755 .
+clear
+read -p "What would you like me to post master? :: " message
 git add .
-git commit -m "$new_message"
-if ! git push; then
-    echo "Sorry couldn't push that Commit Failed"
+git commit -m "$message"
+repository_url=$(git remote get-url origin)  
+# Get the repository URL
+repository_name=$(basename "$repository_url" .git)  
+# Extract the repository name from the URL
+git push
+if [ $? -eq 0 ]; then
+    # Get the list of files that were committed
+    committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
+    
+    sleep 3
+    clear
+    echo "That worked master!     Too bad that you suck at coding!"
+    echo "'$message' Commit message was used on GitHub repo '$repository_name'"
+    echo "Changes were made to the following files:"
+    echo "$committed_files"
+    
+# Display the changes made to each committed file
+    for file in $committed_files; do
+        echo "Changes in '$file':"
+        git diff HEAD^..HEAD "$file"
+        echo
+    done
+
+    sleep 8
+    clear
+else
+    echo "That didn't work stupid! see you suck at everything!"
+    sleep 3
 fi
