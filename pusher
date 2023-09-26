@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# List of 20 positive messages
+positive_messages=("You're the best programmer at Holberton!" "You're a coding superstar!" "Your code skills are unmatched!" "Holberton's finest programmer!" "A coding genius at work!" "Top-notch programmer at Holberton!" "You're the coding wizard!" "Holberton's pride in programming!" "A programming legend in the making!" "Coding excellence at its best!" "Holberton's coding champion!" "You make Holberton proud!" "Code like a pro, like you always do!" "You're setting the coding bar high!" "Holberton's coding prodigy!" "Your code is a work of art!" "Coding perfection in action!" "Holberton's programming guru!" "Keep coding, you're a star!" "You're a coding inspiration!")
+
 chmod -R 755 .
 clear
-read -p "What would you like me to post master? :: " message
+read -p "What would you like me to post for this GitHub commit message? :: " message
 git add .
 git commit -m "$message"
 repository_url=$(git remote get-url origin)  
@@ -15,7 +18,9 @@ if [ $? -eq 0 ]; then
     committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
     
     clear
-    echo "That worked master!     Too bad that you suck at coding!"
+    # Display a random positive message
+    random_index=$((RANDOM % ${#positive_messages[@]}))
+    echo "${positive_messages[$random_index]}"
     echo "'$message' Commit message was used on GitHub repo '$repository_name'"
     echo "Changes were made to the following files:"
     echo "$committed_files"
@@ -32,5 +37,5 @@ if [ $? -eq 0 ]; then
     read -n 1 -s -r -p "Press any key to continue..."
     clear
 else
-    echo "That didn't work stupid! see you suck at everything!"
+    echo "Something went wrong, You can do it!"
 fi
