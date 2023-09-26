@@ -4,12 +4,9 @@
 """Checks the class"""
 
 
-def is_kind_of_class(obj, a_class):
-    """Checks if it is inhertited or instance same class.
-
-    Returns:
-        t or f
-    """
-    if isinstance(obj, a_class):
-        return True
-    return False
+def inherits_from(obj, a_class):
+    """Sub class to sub class"""
+    if type(obj) != a_class and issubclass(type(obj), a_class):
+        return False
+    else:
+        return False
