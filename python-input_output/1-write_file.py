@@ -10,6 +10,7 @@ Your function should create the file if doesn’t exist.
 Your function should overwrite the content of the file if it already exists.
 You are not allowed to import any module"""
 
+
 def write_file(filename="", text=""):
     """write a string to the file"""
     with open(filename, mode="W", encoding="utf-8") as doittoit:
