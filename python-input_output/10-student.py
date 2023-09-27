@@ -20,11 +20,15 @@ You are not allowed to import any module"""
 class Student:
     """its a student"""
 
-    def to_json(self, attrs=None):
-        """Returns the dictionary of student
-        If attrs is a list of strings, represents only
-        attributes included in that list."""
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
+    def __init__(self, first_name, last_name, age):
+        """initalize a student"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+
+def to_json(self, attrs=None):
+    if attrs is None:
         return self.__dict__
+    else:
+        return {attr: getattr(self, attr) for attr in attrs}
