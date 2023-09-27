@@ -44,10 +44,16 @@ if git push; then
         echo
     done
 
-    # Construct the GitHub web URL and open it in the default web browser
-    github_web_url="https://github.com/$repository_name"
-    echo "Opening GitHub repository page: $github_web_url"
-    xdg-open "$github_web_url"
+    # Try different open commands based on the desktop environment
+    if command -v xdg-open &>/dev/null; then
+        xdg-open "https://github.com/$repository_name"
+    elif command -v gnome-open &>/dev/null; then
+        gnome-open "https://github.com/$repository_name"
+    elif command -v kde-open &>/dev/null; then
+        kde-open "https://github.com/$repository_name"
+    else
+        echo "Unable to open the GitHub repository page. Please open it manually in your web browser."
+    fi
     
     read -n 1 -s -r -p "Press any key to continue..."
     if command -v clear &>/dev/null; then
