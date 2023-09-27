@@ -16,10 +16,10 @@ git commit -m "$message"
 
 # Push changes to the remote repository
 if git push; then
-    # Get the repository URL
+    # Get the repository name from the remote URL
     repository_url=$(git remote get-url origin)
-    # Extract the repository name from the URL
     repository_name=$(basename "$repository_url" .git)
+
     # Get the list of files that were committed
     committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
 
@@ -44,8 +44,10 @@ if git push; then
         echo
     done
 
-    # Open the GitHub repository page in the default web browser
-    open "$repository_url"
+    # Construct the GitHub web URL and open it in the default web browser
+    github_web_url="https://github.com/$repository_name"
+    echo "Opening GitHub repository page: $github_web_url"
+    open "$github_web_url"
     
     read -n 1 -s -r -p "Press any key to continue..."
     if command -v clear &>/dev/null; then
