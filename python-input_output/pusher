@@ -1,33 +1,33 @@
 #!/bin/bash
 
 # List of 20 positive messages
-positive_messages=("You're the best programmer at Holberton!" "You're a coding superstar!" "Your code skills are unmatched!" "You are Holberton's finest programmer!" "You are A coding genius at work!" "You are a Top-notch programmer at Holberton!" "You're the coding wizard!" "You are Holberton's pride in programming!" "You are a programming legend in the making!" "Keep it up your showing coding excellence at its best!" "You are Holberton's coding champion!" "You make Holberton proud!" "Awesome!!! Code like a pro, like you always do!" "You're setting the coding bar high!" "You are Holberton's coding prodigy!" "Your code is a work of art!" "You are Coding perfection in action!" "You are Holberton's programming guru!" "Keep coding, you're a star!" "You're a coding inspiration!")
+positive_messages=("You're the best programmer at Holberton!" "You're a coding superstar!" "Your code skills are unmatched!" "You are Holberton's finest programmer!" "You are A coding genius at work!" "You are a Top-notch programmer at Holberton!" "You're the coding wizard!" "You are Holberton's pride in programming!" "You are a programming legend in the making!" "Keep it up your showing coding excellence at its best!" " You are Holberton's coding champion!" "You make Holberton proud!" "Awesome!!! Code like a pro, like you always do!" "You're setting the coding bar high!" "You are Holberton's coding prodigy!" "Your code is a work of art!" "You are Coding perfection in action!" "You are Holberton's programming guru!" "Keep coding, you're a star!" "You're a coding inspiration!")
 
-# Check if the 'clear' command is available
-if command -v clear &>/dev/null; then
-    clear
-fi
+# Set GIT_PAGER to an empty string to disable the pager
+export GIT_PAGER=""
 
+chmod -R 755 .
+clear
 read -p "What would you like to post as your commit message? :: " message
-
-# Add and commit changes
+clear
 git add .
 git commit -m "$message"
-
-# Push changes to the remote repository
-if git push; then
-    # Get the repository name from the remote URL
-    repository_url=$(git remote get-url origin)
-    repository_name=$(basename "$repository_url" .git)
-
+repository_url=$(git remote get-url origin)  
+# Get the repository URL
+repository_name=$(basename "$repository_url" .git)  
+# Extract the repository name from the URL
+git push
+if [ $? -eq 0 ]; then
     # Get the list of files that were committed
     committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
 
+    sleep 5
+    clear
     # Display a random positive message
     random_index=$((RANDOM % ${#positive_messages[@]}))
     echo
     echo
-    echo
+    echo   
     echo "${positive_messages[$random_index]}"
     echo
     echo
@@ -37,28 +37,18 @@ if git push; then
     echo "Changes were made to the following files:"
     echo "$committed_files"
 
+    sleep 5
+    clear
+
     # Display the changes made to each committed file
     for file in $committed_files; do
         echo "Changes in '$file':"
         git diff HEAD^..HEAD -- "$file"
         echo
     done
-
-    # Try different open commands based on the desktop environment
-    if command -v xdg-open &>/dev/null; then
-        xdg-open "https://github.com/$repository_name"
-    elif command -v gnome-open &>/dev/null; then
-        gnome-open "https://github.com/$repository_name"
-    elif command -v kde-open &>/dev/null; then
-        kde-open "https://github.com/$repository_name"
-    else
-        echo "Unable to open the GitHub repository page. Please open it manually in your web browser."
-    fi
     
     read -n 1 -s -r -p "Press any key to continue..."
-    if command -v clear &>/dev/null; then
-        clear
-    fi
+    clear
 else
-    echo "OOPS! That didn't work. Try again. You got this!"
+    echo "OOPS! That didnt work try again, You got this!"
 fi
