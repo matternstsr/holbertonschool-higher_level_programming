@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # File: 11-student.py
 # Matthew Ernst 6628@holbertonstudents.com
-""""""
+"""Defines and student class"""
 
 
 class Student:
