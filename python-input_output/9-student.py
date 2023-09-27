@@ -13,13 +13,15 @@ representation of a Student instance (same as 8-class_to_json.py)
 You are not allowed to import any module"""
 
 
-def to_json(self):
+class Student:
     """Serialize class attributes to dictionary
     obj (object): object to be serialized"""
     def __init__(self, first_name, last_name,age):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+        
+        def to_json(self):
            
     
     return (obj.__dict__)
