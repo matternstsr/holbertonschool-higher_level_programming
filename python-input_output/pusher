@@ -43,6 +43,7 @@ if git push; then
         git diff HEAD^..HEAD -- "$file"
         echo
     done
+    echo "Changes were made here:"
 
     read -n 1 -s -r -p "Press any key to continue..."
     if command -v clear &>/dev/null; then
