@@ -43,7 +43,7 @@ if [ $? -eq 0 ]; then
     # Display the changes made to each committed file
     for file in $committed_files; do
         echo "Changes in '$file':"
-        git show --stat HEAD -- "$file"
+        git log -p -1 -- "$file"
         echo
     done
     
