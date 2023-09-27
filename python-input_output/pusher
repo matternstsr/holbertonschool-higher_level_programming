@@ -47,7 +47,7 @@ if git push; then
     # Construct the GitHub web URL and open it in the default web browser
     github_web_url="https://github.com/$repository_name"
     echo "Opening GitHub repository page: $github_web_url"
-    open "$github_web_url"
+    xdg-open "$github_web_url"
     
     read -n 1 -s -r -p "Press any key to continue..."
     if command -v clear &>/dev/null; then
