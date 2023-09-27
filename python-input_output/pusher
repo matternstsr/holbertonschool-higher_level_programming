@@ -18,9 +18,6 @@ repository_name=$(basename "$repository_url" .git)
 # Extract the repository name from the URL
 git push
 if [ $? -eq 0 ]; then
-    # Get the list of files that were committed
-    committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
-
     sleep 5
     clear
     # Display a random positive message
@@ -35,17 +32,7 @@ if [ $? -eq 0 ]; then
     echo
     echo "'$message' Commit message was used on GitHub repo '$repository_name'"
     echo "Changes were made to the following files:"
-    echo "$committed_files"
-
-    sleep 5
-    clear
-
-    # Display the changes made to each committed file
-    for file in $committed_files; do
-        echo "Changes in '$file':"
-        git log -p -1 -- "$file"
-        echo
-    done
+    git log -p -1
     
     read -n 1 -s -r -p "Press any key to continue..."
     clear
