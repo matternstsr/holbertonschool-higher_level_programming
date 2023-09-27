@@ -18,13 +18,13 @@ class Student(object):
         """all in list or all"""
         if attrs is None:
             return self.__dict__
-        dict = {}
-        for present, value in self.__dict__.items():
-            if present in attrs:
-                dict[present] = value
-        return dict
+        dictionary = {}
+        for key, value in self.__dict__.items():
+            if key in attrs:
+                dictionary[key] = value
+        return dictionary
 
     def reload_from_json(self, json):
         """replaces all attributes of the Student instance"""
-        for present, value in json.items():
-            setattr(self, present, value)
+        for key, value in json.items():
+            setattr(self, key, value)
