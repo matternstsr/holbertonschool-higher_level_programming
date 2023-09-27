@@ -26,9 +26,8 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self, attrs=None):
-        """Returns the dictionary ,If attrs is a list of strings, 
+        """Returns the dictionary ,If attrs is a list of strings,
         represents only attributes included in that list."""
 
         if (type(attrs) == list and
