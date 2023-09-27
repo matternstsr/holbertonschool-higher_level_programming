@@ -6,7 +6,7 @@
 
 def pascal_triangle(n):
     """Defines a triangle"""
-    
+
     if n <= 0:
         return []
     """Returns empty list if less or equal"""
