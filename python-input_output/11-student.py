@@ -3,6 +3,8 @@
 # Matthew Ernst 6628@holbertonstudents.com
 """"""
 
+def class_to_json(obj):
+        return obj.__dict__
 
 class Student:
     """Student class defined"""
@@ -16,15 +18,18 @@ class Student:
 
     def to_json(self, attrs=None):
         """all in list or all"""
-        if attrs is None:
-            return self.__dict__
-        dictionary = {}
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                dictionary[key] = value
-        return dictionary
+        obdict = class_to_json(self)
+        if not attrs:
+            return obdict
+        else:
+            fdict = {}
+            for kvp, value in obdict.items():
+                if kvp in attrs:
+                    fdict[kvp] = value
+            return fdict
 
     def reload_from_json(self, json):
         """replaces all attributes of the Student instance"""
-        for key, value in json.items():
-            setattr(self, key, value)
+        for kvp, value in json.items():
+            if hasattr(self, kvp):
+                setattr(self, kvp, value)
