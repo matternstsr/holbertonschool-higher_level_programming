@@ -31,8 +31,12 @@ class Student:
 def to_json(self, attrs=None):
 
     """sort if there is a list and dont if not"""
+    odict = self.__dict__
     if attrs is None:
         return json.dumps(self.__dict__)
     else:
-        return json.dumps({attr: getattr(self, attr)
-                           for attr in attrs if hasattr(self, attr)})
+        fdict = {}
+        for att in attrs:
+            if hasattr(self, att):
+                fdict[att] = odict[att]
+                return fdict
