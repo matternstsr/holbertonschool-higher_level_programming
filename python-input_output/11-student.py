@@ -28,4 +28,3 @@ class Student(object):
         """replaces all attributes of the Student instance"""
         for present, value in json.items():
             setattr(self, present, value)
-    
