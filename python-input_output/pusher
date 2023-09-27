@@ -31,7 +31,7 @@ if [ $? -eq 0 ]; then
     echo
     echo
     echo "'$message' Commit message was used on GitHub repo '$repository_name'"
-    echo "Changes were made to the following files:"
+    echo "Changes were made to the following files with possible issues"
     git log -p -1
     
     read -n 1 -s -r -p "Press any key to continue..."
@@ -39,21 +39,3 @@ if [ $? -eq 0 ]; then
 else
     echo "OOPS! That didnt work try again, You got this!"
 fi
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
-#trytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytrytry
