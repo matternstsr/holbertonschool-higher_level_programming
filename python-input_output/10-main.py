@@ -11,8 +11,3 @@ j_student_3 = student_2.to_json(['middle_name', 'age'])
 print(j_student_1)
 print(j_student_2)
 print(j_student_3)
-
-guillaume@ubuntu:~/$ ./10-main.py 
-{'age': 23, 'last_name': 'Doe', 'first_name': 'John'}
-{'age': 27, 'first_name': 'Bob'}
-{'age': 27}
