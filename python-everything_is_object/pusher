@@ -1,7 +1,41 @@
 #!/bin/bash
 
+# List of 20 positive messages
+positive_messages=("You're the best programmer at Holberton!" "You're a coding superstar!" "Your code skills are unmatched!" "You are Holberton's finest programmer!" "You are A coding genius at work!" "You are a Top-notch programmer at Holberton!" "You're the coding wizard!" "You are Holberton's pride in programming!" "You are a programming legend in the making!" "Keep it up your showing coding excellence at its best!" " You are Holberton's coding champion!" "You make Holberton proud!" "Awesome!!! Code like a pro, like you always do!" "You're setting the coding bar high!" "You are Holberton's coding prodigy!" "Your code is a work of art!" "You are Coding perfection in action!" "You are Holberton's programming guru!" "Keep coding, you're a star!" "You're a coding inspiration!")
+
+# Set GIT_PAGER to an empty string to disable the pager
+export GIT_PAGER=""
+
 chmod -R 755 .
-read -p "Enter commit message: " message
+clear
+read -p "What would you like to post as your commit message? :: " message
+clear
 git add .
 git commit -m "$message"
+repository_url=$(git remote get-url origin)  
+# Get the repository URL
+repository_name=$(basename "$repository_url" .git)  
+# Extract the repository name from the URL
 git push
+if [ $? -eq 0 ]; then
+    sleep 5
+    clear
+    # Display a random positive message
+    random_index=$((RANDOM % ${#positive_messages[@]}))
+    echo
+    echo
+    echo   
+    echo "${positive_messages[$random_index]}"
+    echo
+    echo
+    echo
+    echo
+    echo "'$message' Commit message was used on GitHub repo '$repository_name'"
+    echo "Changes were made to the following files with possible issues"
+    git log -p -1
+    
+    read -n 1 -s -r -p "Press any key to continue..."
+    clear
+else
+    echo "OOPS! That didnt work try again, You got this!"
+fi
