@@ -15,7 +15,6 @@ If attrs is a list of strings, only attribute names contained
 in this list must be retrieved.
 Otherwise, all attributes must be retrieved
 You are not allowed to import any module"""
-import json
 
 
 class Student:
