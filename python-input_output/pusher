@@ -43,8 +43,10 @@ if git push; then
         git diff HEAD^..HEAD -- "$file"
         echo
     done
-    echo "Changes were made here:"
 
+    # Open the GitHub repository page in the default web browser
+    open "$repository_url"
+    
     read -n 1 -s -r -p "Press any key to continue..."
     if command -v clear &>/dev/null; then
         clear
