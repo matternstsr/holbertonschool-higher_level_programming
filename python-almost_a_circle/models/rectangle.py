@@ -97,7 +97,6 @@ class Rectangle(Base):
     """@property
     def id(self):
         return self.__id
-
     @id.setter
     def id(self, value):
         if type(value) is not int:
