@@ -31,9 +31,9 @@ class Rectangle(Base):
             raise TypeError("width" + self.__typeer) 
         if width <= 0:
             raise ValueError("width" + self.__valer)
-        self.__width = value
+        self.__width = width
         
-        @property
+    @property
     def height(self):
         """Getter for height"""
         return self.__height
@@ -45,7 +45,7 @@ class Rectangle(Base):
             raise TypeError("height" + self.__typeer) 
         if height <= 0:
             raise ValueError("height" + self.__valer)
-        self.__height = value
+        self.__height = height
 
     @property
     def x(self):
@@ -59,21 +59,21 @@ class Rectangle(Base):
             raise TypeError("x" + self.__typeer) 
         if x <= 0:
             raise ValueError("x" + self.__valer)
-        self.__x = value
+        self.__x = x
 
     @property
     def y(self):
         """Getter for y"""
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, y):
         """Setter for y"""
         if type(y) is not int:
             raise TypeError("y" + self.__typeer) 
         if y <= 0:
             raise ValueError("y" + self.__valer)
-        self.__y = value
+        self.__y = y
 
     @property
     def id(self):
@@ -87,4 +87,4 @@ class Rectangle(Base):
             raise TypeError("id" + self.__typeer) 
         if id <= 0:
             raise ValueError("id" + self.__valer)
-        self.__id = value
+        self.__id = id
