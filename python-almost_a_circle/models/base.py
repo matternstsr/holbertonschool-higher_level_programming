@@ -3,6 +3,7 @@
 # Matthew Ernst 6628@holbertonstudents.com
 """Makes a Base Class"""
 
+
 class Base:
     """New Class Base"""
 
