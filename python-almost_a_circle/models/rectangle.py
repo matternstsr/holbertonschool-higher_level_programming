@@ -74,7 +74,3 @@ class Rectangle(Base):
         if id <= 0:
             raise ValueError("id" + self.valer)
         self.__id = id
-
-    def area(self):
-        """The area of the rectangle"""
-        return self.width * self.height
