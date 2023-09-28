@@ -60,7 +60,7 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    def y(self)
+    def y(self):
         """Getter for y"""
         return self.__y
 
