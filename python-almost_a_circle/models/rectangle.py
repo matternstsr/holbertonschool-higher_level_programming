@@ -24,10 +24,10 @@ class Rectangle(Base):
             raise TypeError("width" + self.typeer)
         if type(height) is not int:
             raise TypeError("height" + self.typeer)
-        if type(x) is not int:
+        """if type(x) is not int:
             raise TypeError("x" + self.typeer)
         if type(y) is not int:
-            raise TypeError("y" + self.typeer)
+            raise TypeError("y" + self.typeer)"""
 
         if width <= 0:
             raise ValueError("width" + self.valer)
