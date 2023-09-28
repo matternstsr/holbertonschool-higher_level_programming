@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# base.py
+# rectangle.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Makes a Base Class"""
 from models.base import Base
@@ -16,7 +16,7 @@ class Rectangle(Base):
         self.width = height
         self.x = x
         self.y = y
-        self.id = id
+        """self.id = id"""
         super().__init__(id)
 
     @property
