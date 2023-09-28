@@ -94,16 +94,14 @@ class Rectangle(Base):
             raise ValueError("y" + self.valer)
         self.__y = value
 
-    @property
+    """@property
     def id(self):
-        """Getter for id"""
         return self.__id
 
     @id.setter
     def id(self, value):
-        """Setter for id"""
         if type(value) is not int:
             raise TypeError("id" + self.typeer)
         if value < 0:
             raise ValueError("id" + self.valer)
-        self.__id = value
+        self.__id = value"""
