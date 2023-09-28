@@ -21,7 +21,7 @@ class Rectangle(Base):
         super().__init__(id)
         
         try:
-          if type(width) is not int:
+          """if type(width) is not int:
               raise TypeError("width" + self.typeer)
           if type(height) is not int:
               raise TypeError("height" + self.typeer)
@@ -32,7 +32,7 @@ class Rectangle(Base):
           if width <= 0:
               raise ValueError("width" + self.valer)
           if height <= 0:
-              raise ValueError("height" + self.valer)
+              raise ValueError("height" + self.valer)"""
           if x < 0:
               raise ValueError("x" + self.axiserr)
           if y < 0:
