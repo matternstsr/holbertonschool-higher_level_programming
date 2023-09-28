@@ -9,7 +9,7 @@ class Rectangle(Base):
     """New Rectangle Class"""
     typeer = " must be an integer"
     valer = " must be > 0"
-    axiserr = "must be >= 0"
+    axiserr = " must be >= 0"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
