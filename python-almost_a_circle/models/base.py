@@ -4,10 +4,10 @@
 """Makes a Base Class"""
 
 class Base:
-    """Class Base"""
+    """New Class Base"""
 
     def __init__(self, id=None):
-        """Initializes Base Class"""
+        """Initializes Base Class with id to assign to this obj"""
         if id is not None:
             self.id = id
         else:
