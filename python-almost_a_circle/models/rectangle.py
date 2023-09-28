@@ -9,7 +9,7 @@ class Rectangle(Base):
     """New Class Base"""
     typeer = " must be an integer"
     valer = " must be > 0"
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
         self.width = width
@@ -18,7 +18,7 @@ class Rectangle(Base):
         self.y = y
         self.id = id
         super().__init__(id)
-    
+
     @property
     def width(self):
         """Getter for width"""
@@ -32,7 +32,7 @@ class Rectangle(Base):
         if width <= 0:
             raise ValueError("width" + self.valer)
         self.__width = width
-        
+
     @property
     def x(self):
         """Getter for x"""
@@ -46,7 +46,7 @@ class Rectangle(Base):
         if x <= 0:
             raise ValueError("x" + self.valer)
         self.__x = x
-        
+
     @property
     def y(self):
         """Getter for y"""
@@ -60,7 +60,7 @@ class Rectangle(Base):
         if y <= 0:
             raise ValueError("y" + self.valer)
         self.__y = y
-                
+
     @property
     def id(self):
         """Getter for id"""
