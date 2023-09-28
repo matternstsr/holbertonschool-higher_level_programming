@@ -18,7 +18,7 @@ class Rectangle(Base):
         self.__y = y
         """self.id = id old dont work"""
         super().__init__(id)
-    
+
         if type(width) is not int:
             raise TypeError("width" + self.typeer)
         if width <= 0:
