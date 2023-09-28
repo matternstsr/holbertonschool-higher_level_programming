@@ -32,7 +32,7 @@ class Rectangle(Base):
         if width <= 0:
             raise ValueError("width" + self.valer)
         if height <= 0:
-            raise ValueError("height" + self.typeer)
+            raise ValueError("height" + self.valer)
         if x < 0:
             raise ValueError("x" + self.axiserr)
         if y < 0:
