@@ -7,8 +7,8 @@ from models.base import Base
 
 class Rectangle(Base):
     """New Class Base"""
-    typeer = " must be an integer"
-    valer = " must be > 0"
+    __typeer = " must be an integer"
+    __valer = " must be > 0"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
@@ -28,9 +28,9 @@ class Rectangle(Base):
     def width(self, width):
         """Setter for Width"""
         if type(width) is not int:
-            raise TypeError("width" + self.typeer) 
+            raise TypeError("width" + self.__typeer) 
         if width <= 0:
-            raise ValueError("width" + self.valer)
+            raise ValueError("width" + self.__valer)
         self.__width = width
 
     @property
@@ -42,9 +42,9 @@ class Rectangle(Base):
     def x(self, x):
         """Setter for x"""
         if type(x) is not int:
-            raise TypeError("x" + self.typeer) 
+            raise TypeError("x" + self.__typeer) 
         if x <= 0:
-            raise ValueError("x" + self.valer)
+            raise ValueError("x" + self.__valer)
         self.__x = x
 
     @property
@@ -56,9 +56,9 @@ class Rectangle(Base):
     def y(self, y):
         """Setter for y"""
         if type(y) is not int:
-            raise TypeError("y" + self.typeer) 
+            raise TypeError("y" + self.__typeer) 
         if y <= 0:
-            raise ValueError("y" + self.valer)
+            raise ValueError("y" + self.__valer)
         self.__y = y
 
     @property
@@ -70,7 +70,7 @@ class Rectangle(Base):
     def id(self, id):
         """Setter for id"""
         if type(id) is not int:
-            raise TypeError("id" + self.typeer) 
+            raise TypeError("id" + self.__typeer) 
         if id <= 0:
-            raise ValueError("id" + self.valer)
+            raise ValueError("id" + self.__valer)
         self.__id = id
