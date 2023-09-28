@@ -13,7 +13,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
         self.width = width
-        self.width = height
+        self.height = height
         self.x = x
         self.y = y
         """self.id = id"""
@@ -32,6 +32,20 @@ class Rectangle(Base):
         if width <= 0:
             raise ValueError("width" + self.__valer)
         self.__width = value
+        
+        @property
+    def height(self):
+        """Getter for height"""
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        """Setter for height"""
+        if type(height) is not int:
+            raise TypeError("height" + self.__typeer) 
+        if height <= 0:
+            raise ValueError("height" + self.__valer)
+        self.__height = value
 
     @property
     def x(self):
