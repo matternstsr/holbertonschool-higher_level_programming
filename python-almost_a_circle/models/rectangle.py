@@ -7,6 +7,8 @@ from models.base import Base
 
 class Rectangle(Base):
     """New Class Base"""
+    typeer = " must be an integer"
+    valer = " must be > 0"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
@@ -14,7 +16,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        """self.id = id"""
+        """self.id = id old dont work"""
         super().__init__(id)
 
     @property
@@ -26,9 +28,9 @@ class Rectangle(Base):
     def width(self, value):
         """Setter for Width"""
         if type(value) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("width" + self.typeer)
         if value <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("width" + self.valer)
         self.__width = value
 
     @property
@@ -40,9 +42,9 @@ class Rectangle(Base):
     def height(self, value):
         """Setter for height"""
         if type(value) is not int:
-            raise TypeError("height must be an integer")
+            raise TypeError("height" + self.typeer)
         if value <= 0:
-            raise ValueError("height must be > 0")
+            raise ValueError("height" + self.valer)
         self.__height = value
 
     @property
@@ -54,9 +56,9 @@ class Rectangle(Base):
     def x(self, value):
         """Setter for x"""
         if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+            raise TypeError("x" + self.typeer)
+        if value <= 0:
+            raise ValueError("x" + self.valer)
         self.__x = value
 
     @property
@@ -68,9 +70,9 @@ class Rectangle(Base):
     def y(self, value):
         """Setter for y"""
         if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+            raise TypeError("y" + self.typeer)
+        if value <= 0:
+            raise ValueError("y" + self.valer)
         self.__y = value
 
     @property
@@ -82,7 +84,7 @@ class Rectangle(Base):
     def id(self, value):
         """Setter for id"""
         if type(value) is not int:
-            raise TypeError("id must be an integer")
+            raise TypeError("id" + self.typeer)
         if value <= 0:
-            raise ValueError("id must be > 0")
+            raise ValueError("id" + self.valer)
         self.__id = value
