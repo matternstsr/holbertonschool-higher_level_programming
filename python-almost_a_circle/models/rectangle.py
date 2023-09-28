@@ -66,7 +66,7 @@ class Rectangle(Base):
         """Getter for id"""
         return self.__id
 
-    @height.setter
+    @id.setter
     def id(self, id):
         """Setter for id"""
         if type(id) is not int:
