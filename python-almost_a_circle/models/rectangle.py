@@ -88,7 +88,7 @@ class Rectangle(Base):
         """Setter for y"""
         if type(value) is not int:
             raise TypeError("y" + self.typeer)
-        if value >= 0:
+        if value > 0:
             raise ValueError("y" + self.valer)
         self.__y = value
 
@@ -102,6 +102,6 @@ class Rectangle(Base):
         """Setter for id"""
         if type(value) is not int:
             raise TypeError("id" + self.typeer)
-        if value >= 0:
+        if value > 0:
             raise ValueError("id" + self.valer)
         self.__id = value
