@@ -31,7 +31,7 @@ class Rectangle(Base):
             raise TypeError("width" + self.__typeer) 
         if width <= 0:
             raise ValueError("width" + self.__valer)
-        self.__width = width
+        self.__width = value
 
     @property
     def x(self):
@@ -45,7 +45,7 @@ class Rectangle(Base):
             raise TypeError("x" + self.__typeer) 
         if x <= 0:
             raise ValueError("x" + self.__valer)
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -59,7 +59,7 @@ class Rectangle(Base):
             raise TypeError("y" + self.__typeer) 
         if y <= 0:
             raise ValueError("y" + self.__valer)
-        self.__y = y
+        self.__y = value
 
     @property
     def id(self):
@@ -73,4 +73,4 @@ class Rectangle(Base):
             raise TypeError("id" + self.__typeer) 
         if id <= 0:
             raise ValueError("id" + self.__valer)
-        self.__id = id
+        self.__id = value
