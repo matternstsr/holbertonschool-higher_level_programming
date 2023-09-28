@@ -7,7 +7,7 @@
 class Base:
     """New Class Base"""
     __nb_objects = 0
-            
+
     def __init__(self, id=None):
         """Initializes Base Class with id to assign to this obj"""
         if id is not None:
