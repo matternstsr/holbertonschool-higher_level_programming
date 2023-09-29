@@ -2,7 +2,6 @@
 # square.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Makes a Square Class"""
-from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -24,3 +23,7 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError("size" + self.valer)
         self.__size = value
+
+    def __str__(self):
+        """Returns the print() and str() representation of the Square."""
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "f"{self.size}")
