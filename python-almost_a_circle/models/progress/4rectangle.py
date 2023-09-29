@@ -10,8 +10,6 @@ class Rectangle(Base):
     typeer = " must be an integer"
     valer = " must be > 0"
     axiserr = " must be >= 0"
-    column = 0
-    row = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
@@ -79,22 +77,9 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """returns the area of a given rectangle"""
         return self.height * self.width
-
-    def display(self):
-        """Prints a represenatation of a rectangle using "#""""
-        self.row = 1
-        self.column = 1
-        
-        if self.width == 0 or self.height == 0:
-            """Print nothin if no retangle (0 or less)"""
-            print("")
-            return
-            
-        for self.column in range(self.width):
-            print("#", end=""); self.row += 1
-             
-        
-        
-        
+"""4. Area first
+mandatory
+Score: 0.00% (Checks completed: 0.00%)
+Update the class Rectangle by adding the public method def area(self):
+that returns the area value of the Rectangle instance."""
