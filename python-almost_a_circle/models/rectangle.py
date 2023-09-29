@@ -83,18 +83,16 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
-        """Prints a represenatation of a rectangle using "#""""
+        """Prints a represenatation of a rectangle using "#"""
         self.row = 1
         self.column = 1
-        
+
         if self.width == 0 or self.height == 0:
             """Print nothin if no retangle (0 or less)"""
             print("")
             return
-            
-        for self.column in range(self.width):
-            print("#", end=""); self.row += 1
-             
-        
-        
-        
+        for self.row in range(self.height):
+            for self.column in range(self.width):
+                """Prints x for every column in every row given"""
+                print("#", end="")
+            print("")
