@@ -18,12 +18,9 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Setter for size"""
-        if type(value) is not int:
-            raise TypeError("size" + self.typeer)
-        if value <= 0:
-            raise ValueError("size" + self.valer)
         self.__size = value
 
     def __str__(self):
         """Returns the print() and str() representation of the Square."""
-        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "f"{self.size}")
+        return (f"[Square] ({self.id}) {self.x}/{self.y} - "
+                f"{self.width}")
