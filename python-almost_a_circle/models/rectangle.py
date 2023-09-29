@@ -13,32 +13,37 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes Base Class with new attributes"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         """self.id = id old dont work"""
         super().__init__(id)
+        
+        """try:
+          if type(width) is not int:
+              raise TypeError("width" + self.typeer)
+          if type(height) is not int:
+              raise TypeError("height" + self.typeer)
+          if type(x) is not int:
+              raise TypeError("x" + self.typeer)
+          if type(y) is not int:
+              raise TypeError("y" + self.typeer)
+          if width <= 0:
+              raise ValueError("width" + self.valer)
+          if height <= 0:
+              raise ValueError("height" + self.valer)
+          if x < 0:
+              raise ValueError("x" + self.axiserr)
+          if y < 0:
+              raise ValueError("y" + self.axiserr)
+        except (TypeError, ValueError) as e:
+            print("[{}] {}".format(e.__class__.__name__, e))"""
 
     @property
     def width(self):
         """Getter for width"""
         return self.__width
-
-    @property
-    def height(self):
-        """Getter for height"""
-        return self.__height
-
-    @property
-    def x(self):
-        """Getter for x"""
-        return self.__x
-
-    @property
-    def y(self):
-        """Getter for y"""
-        return self.__y
 
     @width.setter
     def width(self, value):
@@ -49,14 +54,24 @@ class Rectangle(Base):
             raise ValueError("width" + self.valer)
         self.__width = value
 
+    @property
+    def height(self):
+        """Getter for height"""
+        return self.__height
+
     @height.setter
     def height(self, value):
         """Setter for height"""
         if type(value) is not int:
-            raise TypeError("height" + str(self.typeer))
+            raise TypeError("height" + self.typeer)
         if value <= 0:
             raise ValueError("height" + self.valer)
         self.__height = value
+
+    @property
+    def x(self):
+        """Getter for x"""
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -66,6 +81,11 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x" + self.axiserr)
         self.__x = value
+
+    @property
+    def y(self):
+        """Getter for y"""
+        return self.__y
 
     @y.setter
     def y(self, value):
