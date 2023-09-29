@@ -19,26 +19,6 @@ class Rectangle(Base):
         self.y = y
         """self.id = id old dont work"""
         super().__init__(id)
-        
-        """try:
-          if type(width) is not int:
-              raise TypeError("width" + self.typeer)
-          if type(height) is not int:
-              raise TypeError("height" + self.typeer)
-          if type(x) is not int:
-              raise TypeError("x" + self.typeer)
-          if type(y) is not int:
-              raise TypeError("y" + self.typeer)
-          if width <= 0:
-              raise ValueError("width" + self.valer)
-          if height <= 0:
-              raise ValueError("height" + self.valer)
-          if x < 0:
-              raise ValueError("x" + self.axiserr)
-          if y < 0:
-              raise ValueError("y" + self.axiserr)
-        except (TypeError, ValueError) as e:
-            print("[{}] {}".format(e.__class__.__name__, e))"""
 
     @property
     def width(self):
