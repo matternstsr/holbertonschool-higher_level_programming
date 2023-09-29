@@ -121,7 +121,3 @@ class Rectangle(Base):
                     self.x = value
                 if key == 'y':
                     self.y = value
-class Square(Rectangle):
-    def __init__(self, size, x=0, y=0, id=None):
-            return (f"[Square] ({self.id}) {self.x}/{self.y} - "
-                    f"{size}")
