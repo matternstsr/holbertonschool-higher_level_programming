@@ -75,3 +75,14 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y" + self.axiserr)
         self.__y = value
+
+    """@property
+    def id(self):
+        return self.__id
+    @id.setter
+    def id(self, value):
+        if type(value) is not int:
+            raise TypeError("id" + self.typeer)
+        if value < 0:
+            raise ValueError("id" + self.valer)
+        self.__id = value"""

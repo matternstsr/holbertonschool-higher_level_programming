@@ -90,7 +90,7 @@ class Rectangle(Base):
         self.__id = value
         
         
-1. Base class
+"""1. Base class
 mandatory
 Score: 100.00% (Checks completed: 100.00%)
 Write the first class Base:
@@ -127,3 +127,4 @@ Why private attributes with getter/setter? Why not directly public attribute?
 
 Because we want to protect attributes of our class. With a setter, you are able to validate what a developer is trying to assign to a variable. So after, in your class you can “trust” these attributes.
 
+"""
