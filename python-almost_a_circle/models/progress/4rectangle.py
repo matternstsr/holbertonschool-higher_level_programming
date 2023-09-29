@@ -79,7 +79,5 @@ class Rectangle(Base):
     def area(self):
         return self.height * self.width
 """4. Area first
-mandatory
-Score: 0.00% (Checks completed: 0.00%)
 Update the class Rectangle by adding the public method def area(self):
 that returns the area value of the Rectangle instance."""

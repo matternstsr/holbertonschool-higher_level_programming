@@ -91,3 +91,9 @@ class Rectangle(Base):
         """Returns the print() and str() representation of the rectangle."""
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
                 f"{self.width}/{self.height}")
+"""6. __str__
+Update the class Rectangle by overriding the __str__
+method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+"""Finding the indentation and the structure of the string was hard,
+ended up finding a way to shorten my display method by half.
+I way over think things :)"""

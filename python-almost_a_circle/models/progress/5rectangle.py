@@ -83,11 +83,21 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
-        """Prints a representation of a rectangle using "#"."""
-        for _ in range(self.height):
-            print("#" * self.width)
+        """Prints a represenatation of a rectangle using "#"""
+        self.row = 1
+        self.column = 1
 
-    def __str__(self):
-        """Returns the print() and str() representation of the rectangle."""
-        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
-                f"{self.width}/{self.height}")
+        if self.width == 0 or self.height == 0:
+            """Print nothin if no retangle (0 or less)"""
+            print("")
+            return
+        for self.row in range(self.height):
+            for self.column in range(self.width):
+                """Prints x for every column in every row given"""
+                print("#", end="")
+            print("")
+
+"""5. Display #0
+Update the class Rectangle by adding the public method def display(self):
+that prints in stdout the Rectangle instance with the character # -
+you don’t need to handle x and y here."""
