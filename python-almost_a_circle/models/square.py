@@ -6,8 +6,10 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Initializes Square Class"""
+
     def __init__(self, size, x=0, y=0, id=None):
-        """Initializes Base Class with new attributes"""
+        """Initializes Square Class with new attributes"""
         super().__init__(size, size, x, y, id)
 
     @property
