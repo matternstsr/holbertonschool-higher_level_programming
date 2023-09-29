@@ -38,22 +38,25 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Returns the argument(s) selected or if no args then all"""
         if len(args) >= 1:
-            self.id = args[0]
+            if args[0] is not None:
+                self.id = args[0]
+            else:
+                self.__init__(self.size, self.x, self.y)
         if len(args) >= 2:
-            self.width = args[1]
+            self.size = args[1]
         if len(args) >= 3:
-            self.height = args[2]
+            self.x = args[2]
         if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
-        if args is None:
-            return (f"[Square] ({self.id}) {self.x}/{self.y} - "
-                    f"{self.width}")
+            self.y = args[3]
         elif len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key == 'id':
-                    self.id = value
+                    if value is not None:
+                        self.id = value
+                    else:
+                        self.__init__(self.size, self.x, self.y)
+                if key == 'size':
+                    self.size = value
                 if key == 'x':
                     self.x = value
                 if key == 'y':
