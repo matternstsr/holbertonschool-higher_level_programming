@@ -95,6 +95,7 @@ class Rectangle(Base):
                 f"{self.width}/{self.height}")
 
     def update(self, *args):
+        """Returns the argument(s) selected or if no args then all"""
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -107,4 +108,4 @@ class Rectangle(Base):
             self.y = args[4]
         if args is None:
             return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
-                f"{self.width}/{self.height}")
+                    f"{self.width}/{self.height}")
