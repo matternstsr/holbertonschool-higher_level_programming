@@ -94,7 +94,7 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
                 f"{self.width}/{self.height}")
 
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         """Returns the argument(s) selected or if no args then all"""
         if len(args) >= 1:
             self.id = args[0]
@@ -109,15 +109,14 @@ class Rectangle(Base):
         if args is None:
             return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
                     f"{self.width}/{self.height}")
-        elif len(kwargs) > 0:
-            for key, value in kwargs.items():
-                if key == 'id':
-                    self.id = value
-                if key == 'width':
-                    self.width = value
-                if key == 'height':
-                    self.height = value
-                if key == 'x':
-                    self.x = value
-                if key == 'y':
-                    self.y = value
+"""8. Update #0
+Update the class Rectangle by adding the public method def
+update(self, *args): that assigns an argument to each attribute:
+
+1st argument should be the id attribute
+2nd argument should be the width attribute
+3rd argument should be the height attribute
+4th argument should be the x attribute
+5th argument should be the y attribute
+This type of argument is called a “no-keyword argument” - Argument order is
+super important."""
