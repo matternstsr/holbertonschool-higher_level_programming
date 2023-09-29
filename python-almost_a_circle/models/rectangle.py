@@ -96,4 +96,5 @@ class Rectangle(Base):
 
     def update(self, *args):
           return (f"[Rectangle] ({self.id}) {self.width}/{self.height} - "
-                f"{self.x}/{self.y}")    
+                f"{self.x}/{self.y}")
+  
