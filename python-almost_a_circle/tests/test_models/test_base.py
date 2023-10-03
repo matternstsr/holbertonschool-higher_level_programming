@@ -9,7 +9,7 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """ This is a class that tests the base class"""
-    
+
     def test_id_as_negative(self):
         """
         Test for a negative Base Class id
