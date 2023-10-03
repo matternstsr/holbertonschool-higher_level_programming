@@ -51,7 +51,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 1)
         base_instance = Base(None)
         self.assertEqual(base_instance.id, 2)
-"""
+
     def test_create(self):
         """"""
         Test the create method
@@ -64,6 +64,7 @@ class TestBase(unittest.TestCase):
             str(msg.exception)
         )
 """
+
     def test_empty_json_string(self):
         """"""
         Test for a empty data on the to_json_string method
@@ -75,7 +76,7 @@ class TestBase(unittest.TestCase):
         empty_data = None
         json_data = Base.to_json_string(empty_data)
         self.assertEqual(json_data, "[]")
-"""
+
 """Getting the following tests"""
 """0,2,22,25,36,48,52,83"""
 
