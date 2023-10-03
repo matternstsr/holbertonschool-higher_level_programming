@@ -123,5 +123,8 @@ class Rectangle(Base):
                     self.y = value
                     
     def to_dictionary(self):
-        """Returns dictionary of a Square"""
-        return vars(self)
+        return {'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
