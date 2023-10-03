@@ -86,7 +86,7 @@ class Base:
                     item in the dictionary. Each item represents data for an
                     instance."""
                     instances.append(cls.create(**obj))
-                    
+
                     """Within the loop, this line creates an
                     instance using the create class method,
                     passing the unpacked obj
