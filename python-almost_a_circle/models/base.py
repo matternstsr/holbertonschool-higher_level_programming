@@ -43,7 +43,7 @@ class Base:
             return []
 
     @classmethod
-    def create(cls, **dictionary)
+    def create(cls, **dictionary):
         """returns an instance with all attributes already set:"""
         created = None
         if cls.__name__ == 'Square':
