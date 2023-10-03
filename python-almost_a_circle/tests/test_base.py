@@ -63,3 +63,17 @@ class TestBase(unittest.TestCase):
             "create() takes 1 positional argument but 2 were given",
             str(msg.exception)
         )
+
+    def test_empty_json_string(self):
+        """
+        Test for a empty data on the to_json_string method
+        """
+        empty_data = []
+        json_data = Base.to_json_string(empty_data)
+        self.assertEqual(json_data, "[]")
+
+        empty_data = None
+        json_data = Base.to_json_string(empty_data)
+        self.assertEqual(json_data, "[]")
+
+
