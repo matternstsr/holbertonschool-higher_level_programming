@@ -53,11 +53,8 @@ class Base:
         cls.update(created, **dictionary)
         return created
 
-@classmethod
-def load_from_file(cls, file_name):
-    """Returns a list of instances loaded from a JSON file."""
-    if not file_name or not os.path.isfile(file_name):
-        return []
-
-    instances = [cls.create(**obj) for obj in data]
-    return instances
+    @classmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
