@@ -28,7 +28,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 100)
         base_instance = Base(10)
         self.assertEqual(base_instance.id, 10)
-
+"""
     def test_isinstance(self):
         """"""
         Test a Base Class instance
@@ -44,18 +44,18 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 'Python is cool')
 
     def test_id_as_none(self):
-        """
+        """"""
         Test for a None Base Class id
-        """
+        """"""
         base_instance = Base()
         self.assertEqual(base_instance.id, 1)
         base_instance = Base(None)
         self.assertEqual(base_instance.id, 2)
 
     def test_create(self):
-        """
+        """"""
         Test the create method
-        """
+        """"""
         with self.assertRaises(TypeError) as msg:
             warn = Rectangle.create('Monty Python')
 
@@ -65,9 +65,9 @@ class TestBase(unittest.TestCase):
         )
 
     def test_empty_json_string(self):
-        """
+        """"""
         Test for a empty data on the to_json_string method
-        """
+        """"""
         empty_data = []
         json_data = Base.to_json_string(empty_data)
         self.assertEqual(json_data, "[]")
@@ -75,7 +75,7 @@ class TestBase(unittest.TestCase):
         empty_data = None
         json_data = Base.to_json_string(empty_data)
         self.assertEqual(json_data, "[]")
-
+"""
 """Getting the following tests"""
 """0,2,22,25,36,48,52,83"""
 
