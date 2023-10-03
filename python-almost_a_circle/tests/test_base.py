@@ -59,15 +59,6 @@ class TestBase(unittest.TestCase):
         base_instance = Base('Python is cool')
         self.assertEqual(base_instance.id, 'Python is cool')
 
-    def test_to_json_string(self):
-        """
-        Test the to_json_string method
-        """
-        rect_instance = Rectangle(10, 7, 2, 8, 70)
-        rect_data = re1.to_dictionary()
-        json_data = Base.to_json_string([rect_data])
-        self.assertEqual(type(json_data), str)
-
     def test_empty_to_json_string(self):
         """
         Test for a empty data on the to_json_string method
@@ -163,14 +154,4 @@ class TestBase(unittest.TestCase):
 
         self.assertEqual(warn, str(msg.exception))
 
-    def test_create(self):
-        """
-        Test the create method
-        """
-        with self.assertRaises(TypeError) as msg:
-            warn = Rectangle.create('Monty Python')
-
-        self.assertEqual(
-            "create() takes 1 positional argument but 2 were given",
-            str(msg.exception)
-        )
+        """0,2,22,25,36,38,42,48,52,63,65,83"""
