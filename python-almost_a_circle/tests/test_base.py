@@ -11,15 +11,6 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """ This is a class that tests the base class"""
-    
-    def test_pep8_base(self):
-        """
-        Test that checks PEP8
-        """
-        syntax = pep8.StyleGuide(quit=True)
-        check = syntax.check_files(['models/base.py'])
-        self.assertEqual(check.total_errors, 0,
-                         "Found code style errors (and warnings).")
 
     def test_id_as_negative(self):
         """
@@ -61,3 +52,12 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 1)
         base_instance = Base(None)
         self.assertEqual(base_instance.id, 2)
+
+    def test_pep8_base(self):
+        """
+        Test that checks PEP8
+        """
+        syntax = pep8.StyleGuide(quit=True)
+        check = syntax.check_files(['models/base.py'])
+        self.assertEqual(check.total_errors, 0,
+                         "Found code style errors (and warnings).")
