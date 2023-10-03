@@ -37,3 +37,17 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 100)
         base_instance = Base(10)
         self.assertEqual(base_instance.id, 10)
+
+    def test_isinstance(self):
+        """
+        Test a Base Class instance
+        """
+        base_instance = Base()
+        self.assertEqual(type(base_instance), Base)
+        self.assertTrue(isinstance(base_instance, Base))
+
+    def test_string_id(self):
+        base_instance = Base('Monty Python')
+        self.assertEqual(base_instance.id, 'Monty Python')
+        base_instance = Base('Python is cool')
+        self.assertEqual(base_instance.id, 'Python is cool')
