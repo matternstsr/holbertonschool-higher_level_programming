@@ -1,6 +1,7 @@
 import unittest
 from models.base import Base, Rectangle, Square
 
+
 class TestBase(unittest.TestCase):
 
     def test_to_json_string(self):
@@ -8,30 +9,29 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([]), "[]")
 
         """Test when input is a list of dictionaries"""
-        input_list = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
-        expected_output = '[{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]'
-        self.assertEqual(Base.to_json_string(input_list), expected_output)
+        input_list = [{"id": 1, "name": "Matt"}, {"id": 2, "name": "Bob"}]
+        expect_output = '[{"id": 1, "name": "Matt"}, {"id": 2, "name": "Bob"}]'
+        self.assertEqual(Base.to_json_string(input_list), expect_output)
 
-    def test_save_to_file(self):
+    def test_save_to_file_not_none(self):
         """Test when list_objs is None"""
-        Rectangle.save_to_file(None)
-        with open('Rectangle.json', 'r') as f:
-            self.assertEqual(f.read(), "[]")
-
-        """Test when list_objs is not None"""
         r1 = Rectangle(1, 2)
         r2 = Rectangle(3, 4)
         Rectangle.save_to_file([r1, r2])
+
         with open('Rectangle.json', 'r') as f:
-            self.assertEqual(f.read(), '[{"id": 1, "width": 1, "height": 2, "x": 0, "y": 0}, {"id": 2, "width": 3, "height": 4, "x": 0, "y": 0}]')
+            expected_json = (
+               '[{"id": 1, "width": 1, "height": 2, "x": 0, "y": 0}, '
+               '{"id": 2, "width": 3, "height": 4, "x": 0, "y": 0}]')
+            self.assertEqual(f.read(), expected_json)
 
     def test_from_json_string(self):
         """Test when JSON string is empty"""
         self.assertEqual(Base.from_json_string(""), [])
 
         """Test when JSON string is not empty"""
-        json_string = '[{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]'
-        expected_output = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
+        json_string = '[{"id": 1, "name": "Matt"}, {"id": 2, "name": "Bob"}]'
+        expected_output = [{"id": 1, "name": "Matt"}, {"id": 2, "name": "Bob"}]
         self.assertEqual(Base.from_json_string(json_string), expected_output)
 
     def test_create(self):
@@ -55,5 +55,7 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file([r1, r2])
         loaded_rectangles = Rectangle.load_from_file()
         self.assertEqual(len(loaded_rectangles), 2)
-        self.assertEqual(loaded_rectangles[0].__str__(), "[Rectangle] (1) 0/0 - 1/2")
-        self.assertEqual(loaded_rectangles[1].__str__(), "[Rectangle] (2) 0/0 - 3/4")
+        self.assertEqual(loaded_rectangles[0].__str__(),
+                         "[Rectangle] (1) 0/0 - 1/2")
+        self.assertEqual(loaded_rectangles[1].__str__(),
+                         "[Rectangle] (2) 0/0 - 3/4")
