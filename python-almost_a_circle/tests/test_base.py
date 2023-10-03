@@ -12,13 +12,9 @@ from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-    """
-    A class to test the Base Class
-    """
+    """A class to test the Base Class"""
     def test_pep8_base(self):
-        """
-        Test that checks PEP8
-        """
+        """Test that checks PEP8"""
         syntax = pep8.StyleGuide(quit=True)
         check = syntax.check_files(['models/base.py'])
         self.assertEqual(
@@ -27,42 +23,34 @@ class TestBase(unittest.TestCase):
         )
 
     def test_id_as_positive(self):
-        """
-        Test for a positive Base Class id
-        """
-        base_instance = Base(115)
-        self.assertEqual(base_instance.id, 115)
-        base_instance = Base(67)
-        self.assertEqual(base_instance.id, 67)
+        """positive Base Class id"""
+        base_instance = Base(10)
+        self.assertEqual(base_instance.id, 10)
+        base_instance = Base(5)
+        self.assertEqual(base_instance.id, 5)
 
     def test_id_as_negative(self):
-        """
-        Test for a negative Base Class id
-        """
-        base_instance = Base(-91)
-        self.assertEqual(base_instance.id, -91)
-        base_instance = Base(-4)
-        self.assertEqual(base_instance.id, -4)
+        """negative Base Class id"""
+        base_instance = Base(-10)
+        self.assertEqual(base_instance.id, -10)
+        base_instance = Base(-5)
+        self.assertEqual(base_instance.id, -5)
 
     def test_id_as_none(self):
-        """
-        Test for a None Base Class id
-        """
+        """None with Base Class id"""
         base_instance = Base()
         self.assertEqual(base_instance.id, 1)
         base_instance = Base(None)
         self.assertEqual(base_instance.id, 2)
 
     def test_string_id(self):
-        base_instance = Base('Monty Python')
-        self.assertEqual(base_instance.id, 'Monty Python')
-        base_instance = Base('Python is cool')
-        self.assertEqual(base_instance.id, 'Python is cool')
+        base_instance = Base('Python got really hard')
+        self.assertEqual(base_instance.id, 'Python got really hard')
+        base_instance = Base('Python is picky')
+        self.assertEqual(base_instance.id, 'Python is picky')
 
     def test_empty_to_json_string(self):
-        """
-        Test for a empty data on the to_json_string method
-        """
+        """to_json_string no data"""
         empty_data = []
         json_data = Base.to_json_string(empty_data)
         self.assertEqual(json_data, "[]")
@@ -72,32 +60,25 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_data, "[]")
 
     def test_instance(self):
-        """
-        Test a Base Class instance
-        """
+        """Checking instance"""
         base_instance = Base()
         self.assertEqual(type(base_instance), Base)
         self.assertTrue(isinstance(base_instance, Base))
 
     def test_to_json_string(self):
-        """
-        Test a normal to_json_string functionality
-        """
-        rect_data = {'id': 31, 'x': 14, 'y': 11, 'width': 3, 'height': 3}
+        """to_json_string from normal strings"""
+        rect_data = {'id': 10, 'x': 15, 'y': 5, 'width': 20, 'height': 10}
         json_data = Base.to_json_string([rect_data])
 
         self.assertTrue(isinstance(rect_data, dict))
         self.assertTrue(isinstance(json_data, str))
         self.assertCountEqual(
             json_data,
-            '{["id": 31, "x": 14, "y": 11, "width": 3, "height": 3]}'
+            '{["id": 10, "x": 15, "y": 5, "width": 20, "height": 10]}'
         )
 
     def test_wrong_to_json_string(self):
-        """
-        Test a wrong functionality of the
-        to_json_string method
-        """
+        """to_json_string method gone wrong"""
         json_data = Base.to_json_string(None)
         self.assertEqual(json_data, "[]")
 
@@ -117,9 +98,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(warn, str(msg.exception))
 
     def test_wrong_save_to_file(self):
-        """
-        Test the save_to_file method
-        """
+        """Test the save_to_file method"""
         with self.assertRaises(AttributeError) as msg:
             Base.save_to_file([Base(1), Base(2)])
 
@@ -129,9 +108,7 @@ class TestBase(unittest.TestCase):
         )
 
     def test_load_from_file(self):
-        """
-        Test the load_from_file method
-        """
+        """Test the load_from_file method"""
         if os.path.exists("Base.json"):
             os.remove("Base.json")
 
