@@ -44,6 +44,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary)
+        """returns an instance with all attributes already set:"""
         created = None
         if cls.__name__ == 'Square':
             created = cls(1, 1)
