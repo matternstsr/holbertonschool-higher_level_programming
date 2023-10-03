@@ -29,7 +29,6 @@ class Base:
 
         with open(filename, mode='w', encoding='utf-8') as f:
             if list_objs is None:
-                for obj in list_objs:
                     return f.write(cls.to_json_string(None))
 
             else:
