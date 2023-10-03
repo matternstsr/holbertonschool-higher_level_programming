@@ -30,8 +30,7 @@ class Base:
         with open(filename, mode='w', encoding='utf-8') as f:
             if list_objs is None:
                 for obj in list_objs:
-                    json_list.append(obj.to_dictionary())
-
-                    if len(json_list) > 0:
-                        json_string = Base.to_json_string(json_list)
-                        return f.write(cls.to_json_string(None))
+                    return f.write(cls.to_json_string(None))
+            else:
+                f.write(cls.to_json_string([o.to_dictionary()
+                        for o in list_objs]))
