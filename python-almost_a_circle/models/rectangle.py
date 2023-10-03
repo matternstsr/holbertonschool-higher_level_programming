@@ -19,7 +19,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        """self.id = id old dont work"""
+        self.id = id
         super().__init__(id)
 
     @property
