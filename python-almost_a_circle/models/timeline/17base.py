@@ -42,12 +42,11 @@ class Base:
         except (ValueError, TypeError):
             return []
 
-    @classmethod
-    def create(cls, **dictionary)
-        created = None
-        if cls.__name__ == 'Square':
-            created = cls(1, 1)
-        elif cls.__name__ == 'Rectangle':
-            created = cls(1)
-        cls.update(created, **dictionary)
-        return created
+"""17. JSON string to dictionary
+Update the class Base by adding the static method def
+from_json_string(json_string): that returns the list of the JSON string 
+representation json_string:
+json_string is a string representing a list of dictionaries
+If json_string is None or empty, return an empty list
+Otherwise, return the list represented by json_string
+guillaume@ubuntu:~/$ cat 16-main.py"""
