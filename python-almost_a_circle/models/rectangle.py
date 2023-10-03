@@ -121,7 +121,7 @@ class Rectangle(Base):
                     self.x = value
                 if key == 'y':
                     self.y = value
-       
+ 
     def to_dictionary(self):
         return {'id': self.id,
                 'width': self.width,
