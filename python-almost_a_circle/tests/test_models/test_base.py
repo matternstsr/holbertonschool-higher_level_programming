@@ -1,39 +1,25 @@
 #!/usr/bin/python3
-""" A module that tests the Base class """
-import unittest
-import pep8
+"""Describes the unittests for base.py file
+
+Unittest classes:
+    TestBase_instantiation - line 21
+    TestBase_to_json_string - line 100
+    TestBase_from_json_string - line 146
+    TestBase_create - line 200
+    TestBase_save_to_file - line 252
+    TestBase_load_from_file - line 330
+"""
 import os
+import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-" I dont know what I need here!!!!!!!!!!!!"
 
 
-class TestBase(unittest.TestCase):
-    """ This is a class that tests the base class"""
-    def test_pep8_base(self):
-        """
-        Test that checks PEP8
-        """
-        syntax = pep8.StyleGuide(quit=True)
-        check = syntax.check_files(['models/base.py'])
-        self.assertEqual(check.total_errors, 0,
-                         "Found code style errors (and warnings).")
+class TestBase_instantiation(unittest.TestCase):
+    """Unittests that test instantiation of the new class: Base"""
 
-    def test_id_as_negative(self):
-        """
-        Test for a negative Base Class id
-        """
-        base_instance = Base(-100)
-        self.assertEqual(base_instance.id, -100)
-        base_instance = Base(-10)
-        self.assertEqual(base_instance.id, -10)
-
-    def test_id_as_positive(self):
-        """
-        Test for a positive Base Class id
-        """
-        base_instance = Base(100)
-        self.assertEqual(base_instance.id, 100)
-        base_instance = Base(10)
-        self.assertEqual(base_instance.id, 10)
+    def test_no_argument(self):
+        base1 = Base()
+        base2 = Base()
+        self.assertEqual(base1.id, base2.id - 1)
