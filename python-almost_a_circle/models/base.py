@@ -54,7 +54,7 @@ class Base:
         return created
 
     @classmethod
-    def from_json_string(json_string):
-        if json_string is None or len(json_string) == 0:
-            return []
-        return json.loads(json_string)
+    def load_from_file(cls):
+        """Returns a list of instances loaded from a JSON file 'i think'."""
+        file_name = cls.__name__ + cls.FILE_EXTENSION
+        instances = []
