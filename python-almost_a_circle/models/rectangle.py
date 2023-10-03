@@ -123,6 +123,7 @@ class Rectangle(Base):
                     self.y = value
  
     def to_dictionary(self):
+        """ defines a dictionary for a rectangle"""
         return {'id': self.id,
                 'width': self.width,
                 'height': self.height,
