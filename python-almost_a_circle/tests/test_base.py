@@ -10,7 +10,7 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """ This is a class that tests the base class"""
-"""
+
     def test_id_as_negative(self):
         """"""
         Test for a negative Base Class id
@@ -63,7 +63,6 @@ class TestBase(unittest.TestCase):
             "create() takes 1 positional argument but 2 were given",
             str(msg.exception)
         )
-"""
 
     def test_empty_json_string(self):
         """"""
