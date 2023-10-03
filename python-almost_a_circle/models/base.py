@@ -94,4 +94,3 @@ class Base:
                     The created instance is then appended
                     to the instances list."""
         return instances
-
