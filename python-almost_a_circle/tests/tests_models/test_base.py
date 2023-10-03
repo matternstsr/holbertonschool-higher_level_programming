@@ -3,6 +3,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase(unittest.TestCase):
 
     def test_to_json_string(self):
