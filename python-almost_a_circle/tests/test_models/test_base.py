@@ -51,3 +51,12 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 'Monty Python')
         base_instance = Base('Python is cool')
         self.assertEqual(base_instance.id, 'Python is cool')
+
+    def test_id_as_none(self):
+        """
+        Test for a None Base Class id
+        """
+        base_instance = Base()
+        self.assertEqual(base_instance.id, 1)
+        base_instance = Base(None)
+        self.assertEqual(base_instance.id, 2)
