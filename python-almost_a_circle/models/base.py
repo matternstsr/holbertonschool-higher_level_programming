@@ -2,7 +2,8 @@
 # base.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Makes a Base Class"""
-import json
+import json # Import the 'os' module
+import os  # Import the 'os' module
 
 
 class Base:
