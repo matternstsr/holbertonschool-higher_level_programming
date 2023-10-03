@@ -3,7 +3,7 @@
 # Matthew Ernst 6628@holbertonstudents.com
 """Makes a Base Class"""
 import json  # Import the 'os' module
-import os  # Import the 'os' module
+from os import path  # Import the 'path' submodule
 
 
 class Base:
