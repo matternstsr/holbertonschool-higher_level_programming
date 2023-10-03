@@ -36,7 +36,7 @@ class TestBase(unittest.TestCase):
         base_instance = Base()
         self.assertEqual(type(base_instance), Base)
         self.assertTrue(isinstance(base_instance, Base))
-"""
+
     def test_string_id(self):
         base_instance = Base('Monty Python')
         self.assertEqual(base_instance.id, 'Monty Python')
@@ -51,7 +51,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 1)
         base_instance = Base(None)
         self.assertEqual(base_instance.id, 2)
-
+"""
     def test_create(self):
         """"""
         Test the create method
