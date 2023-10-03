@@ -2,8 +2,8 @@
 # base.py
 # Matthew Ernst 6628@holbertonstudents.com
 """Makes a Base Class"""
-import json # Import the 'os' module
-import os  # Import the 'os' module
+import json  # Import the 'os' module
+from os import path  # Import the 'path' submodule
 
 
 class Base:
@@ -55,6 +55,7 @@ class Base:
             created = cls(1)
         cls.update(created, **dictionary)
         return created
+
 
     @classmethod
     def load_from_file(cls):
