@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-""" A module that tests the Base class """
+"""
+A module that tests the Base class
+"""
 import unittest
 import pep8
 import os
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-" I dont know what I need here!!!!!!!!!!!!"
 
 
 class TestBase(unittest.TestCase):
