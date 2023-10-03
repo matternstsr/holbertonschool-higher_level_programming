@@ -52,7 +52,7 @@ class Base:
             created = cls(1)
         cls.update(created, **dictionary)
         return created
-    
+
 @classmethod
 def load_from_file(cls, file_name):
     """Returns a list of instances loaded from a JSON file."""
