@@ -11,6 +11,7 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """ This is a class that tests the base class"""
+    
     def test_pep8_base(self):
         """
         Test that checks PEP8
