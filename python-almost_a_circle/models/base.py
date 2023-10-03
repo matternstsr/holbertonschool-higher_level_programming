@@ -31,6 +31,7 @@ class Base:
             if list_objs is None:
                 for obj in list_objs:
                     return f.write(cls.to_json_string(None))
+
             else:
-                f.write(cls.to_json_string([o.to_dictionary()
-                        for o in list_objs]))
+                f.write(cls.to_json_string([obj.to_dictionary()
+                        for obj in list_objs]))
