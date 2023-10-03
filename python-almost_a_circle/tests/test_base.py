@@ -42,7 +42,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_instance.id, 'Monty Python')
         base_instance = Base('Python is cool')
         self.assertEqual(base_instance.id, 'Python is cool')
-"""
+
     def test_id_as_none(self):
         """"""
         Test for a None Base Class id
@@ -63,7 +63,7 @@ class TestBase(unittest.TestCase):
             "create() takes 1 positional argument but 2 were given",
             str(msg.exception)
         )
-
+"""
     def test_empty_json_string(self):
         """"""
         Test for a empty data on the to_json_string method
