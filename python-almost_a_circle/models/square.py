@@ -69,4 +69,3 @@ class Square(Rectangle):
             'width': self.size,
             'x': self.x,
             'y': self.y}
-
