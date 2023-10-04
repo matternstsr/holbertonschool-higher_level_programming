@@ -104,4 +104,3 @@ class TestSquareMethods(unittest.TestCase):
             'y': 3
         }
         self.assertEqual(square.to_dictionary(), expected_dict)
-

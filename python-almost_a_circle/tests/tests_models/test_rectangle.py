@@ -105,4 +105,3 @@ class TestRectangleMethods(unittest.TestCase):
             'y': 0
         }
         self.assertEqual(rect.to_dictionary(), expected_dict)
-
