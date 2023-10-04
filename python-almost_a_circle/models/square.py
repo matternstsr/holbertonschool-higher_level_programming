@@ -4,6 +4,7 @@
 """Makes a Square Class"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Initializes Square Class"""
 
@@ -25,31 +26,47 @@ class Square(Rectangle):
     def display(self):
         """Prints a representation of a Square using "#"."""
         for _ in range(self.y):
-            print()
+            print(f"{'' * self.x}")
         for _ in range(self.height):
-            print(" " * self.x + "#" * self.width)
+            print(f"{' ' * self.x}{ '#' * self.width}")
 
     def __str__(self):
         """Returns the print() and str() representation of the Square."""
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return (f"[Square] ({self.id}) {self.x}/{self.y} - "
+                f"{self.width}")
 
     def update(self, *args, **kwargs):
-        """Updates Square attributes based on arguments or keyword arguments"""
-        attrs = ['id', 'size', 'x', 'y']
-        if args:
-            for i in range(len(args)):
-                if i < len(attrs) and args[i] is not None:
-                    setattr(self, attrs[i], args[i])
-        else:
+        """Returns the argument(s) selected or if no args then all"""
+        if len(args) >= 1:
+            if args[0] is not None:
+                self.id = args[0]
+            else:
+                self.__init__(self.size, self.x, self.y)
+        if len(args) >= 2:
+            self.size = args[1]
+        if len(args) >= 3:
+            self.x = args[2]
+        if len(args) >= 4:
+            self.y = args[3]
+        elif len(kwargs) > 0:
             for key, value in kwargs.items():
-                if key in attrs and value is not None:
-                    setattr(self, key, value)
+                if key == 'id':
+                    if value is not None:
+                        self.id = value
+                    else:
+                        self.__init__(self.size, self.x, self.y)
+                if key == 'size':
+                    self.size = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
 
     def to_dictionary(self):
-        """Defines a dictionary representation for a Square"""
+        """ defines a dictionary for a Square from rectangle"""
         return {
             'id': self.id,
-            'size': self.size,
+            'width': self.size,
             'x': self.x,
-            'y': self.y
-        }
+            'y': self.y}
+
