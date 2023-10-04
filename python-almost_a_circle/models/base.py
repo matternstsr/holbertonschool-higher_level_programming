@@ -12,10 +12,13 @@ class Base:
     FILE_EXTENSION = '.json'
     ENCODING = 'utf-8'
 
-    def __init__(self, id=None):
+    def __init__(self, *args):
         """Initializes Base Class with id to assign to this obj"""
-        if id is not None:
-            self.id = id
+        if len(args) != 1:
+            raise TypeError("Base constructor accepts only one argument")
+        id_or_none = args[0]
+        if id_or_none is not None:
+            self.id = id_or_none
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects

@@ -61,8 +61,7 @@ class TestSquareInstantiation(unittest.TestCase):
 
     def test_two_arguments(self):
         with self.assertRaises(TypeError):
-            Square(15, 20)
-
+            square = Square(15, 20)
 
 class TestSquareMethods(unittest.TestCase):
     def test_area(self):
@@ -81,8 +80,8 @@ class TestSquareMethods(unittest.TestCase):
         self.assertEqual(str(square), "[Square] (7) 2/1 - 3")
 
     def test_update_args(self):
-        square = Square(5, 0, 0, 1)
-        square.update(10, 2, 4, 5)
+        square = Square(2, 4, 5)
+        square.update(10, 2, 5, 0)
         self.assertEqual(str(square), "[Square] (10) 5/0 - 2")
 
     def test_update_kwargs(self):

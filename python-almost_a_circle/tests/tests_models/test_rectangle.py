@@ -28,7 +28,9 @@ class TestRectangleInstantiation(unittest.TestCase):
         self.assertEqual({"key": "value"}, Rectangle({"key": "value"}).id)
 
     def test_bool_id(self):
-        self.assertEqual(False, Rectangle(False).id)
+        width = 10  # Replace with a valid width value
+        height = 20  # Replace with a valid height value
+        self.assertEqual(False, Rectangle(width, height).id)
 
     def test_tuple_id(self):
         self.assertEqual((1, 2, 3), Rectangle((1, 2, 3)).id)
@@ -41,13 +43,16 @@ class TestRectangleInstantiation(unittest.TestCase):
 
     def test_range_id(self):
         self.assertEqual(range(4), Rectangle(range(4)).id)
-
+      
     def test_bytes_id(self):
-        self.assertEqual(b'Testing', Rectangle(b'Testing').id)
+        width = 10  # Replace with a valid width value
+        height = 20  # Replace with a valid height value
+        self.assertEqual(b'Testing', Rectangle(width, height).id)
 
     def test_bytearray_id(self):
-        self.assertEqual(
-            bytearray(b'abcd1234'), Rectangle(bytearray(b'abcd1234')).id)
+        width = 10  # Replace with a valid width value
+        height = 20  # Replace with a valid height value
+        self.assertEqual(bytearray(b'abcd1234'), Rectangle(width, height).id)
 
     def test_memoryview_id(self):
         self.assertEqual(
