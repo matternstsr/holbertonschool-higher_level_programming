@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-A module that tests different behaviors
+A module that test differents behaviors
 of the Base class
 """
 import unittest
+import pep8
 import os
-from unittest import mock
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -64,13 +64,13 @@ class TestBase(unittest.TestCase):
         Test the to_json_string method
         """
         rect_instance = Rectangle(10, 7, 2, 8, 70)
-        rect_data = rect_instance.to_dictionary()
+        rect_data = re1.to_dictionary()
         json_data = Base.to_json_string([rect_data])
         self.assertEqual(type(json_data), str)
 
     def test_empty_to_json_string(self):
         """
-        Test for empty data on the to_json_string method
+        Test for a empty data on the to_json_string method
         """
         empty_data = []
         json_data = Base.to_json_string(empty_data)
@@ -90,7 +90,7 @@ class TestBase(unittest.TestCase):
 
     def test_to_json_string(self):
         """
-        Test normal to_json_string functionality
+        Test a normal to_json_string functionality
         """
         rect_data = {'id': 31, 'x': 14, 'y': 11, 'width': 3, 'height': 3}
         json_data = Base.to_json_string([rect_data])
@@ -99,20 +99,19 @@ class TestBase(unittest.TestCase):
         self.assertTrue(isinstance(json_data, str))
         self.assertCountEqual(
             json_data,
-            '[{"id": 31, "x": 14, "y": 11, "width": 3, "height": 3}]'
+            '{["id": 31, "x": 14, "y": 11, "width": 3, "height": 3]}'
         )
 
     def test_wrong_to_json_string(self):
         """
-        Test wrong functionality of the to_json_string method
+        Test a wrong functionality of the
+        to_json_string method
         """
         json_data = Base.to_json_string(None)
         self.assertEqual(json_data, "[]")
 
-        warn = (
-            "to_json_string() missing 1 required positional argument: " +
-            "'list_dictionaries'"
-        )
+        warn = ("to_json_string() missing 1 required positional argument: " +
+                "'list_dictionaries'")
 
         with self.assertRaises(TypeError) as msg:
             Base.to_json_string()
@@ -175,6 +174,3 @@ class TestBase(unittest.TestCase):
             "create() takes 1 positional argument but 2 were given",
             str(msg.exception)
         )
-
-if __name__ == '__main__':
-    unittest.main()
