@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import io
 import os
 import unittest
 from models.rectangle import Rectangle
