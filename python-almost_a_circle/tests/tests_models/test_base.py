@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A module that test different behaviors
+A module that tests different behaviors
 of the Base class
 """
 import unittest
@@ -79,20 +79,16 @@ class TestBase(unittest.TestCase):
         json_data = Base.to_json_string(None)
         self.assertEqual(json_data, "[]")
 
-        warn = ("to_json_string() missing 1 required positional argument: " +
-                "'list_dictionaries'")
-
         with self.assertRaises(TypeError) as msg:
-            Base.to_json_string()
+            Base.to_json_string(
+                [{43, 87}],
+                [{22, 17}]
+            )
 
-        self.assertEqual(warn, str(msg.exception))
-
-        warn = "to_json_string() takes 1 positional argument but 2 were given"
-
-        with self.assertRaises(TypeError) as msg:
-            Base.to_json_string([{43, 87}], [{22, 17}])
-
-        self.assertEqual(warn, str(msg.exception))
+        self.assertEqual(
+            "to_json_string() takes 1 positional argument but 2 were given",
+            str(msg.exception)
+        )
 
     def test_wrong_save_to_file(self):
         """
@@ -125,12 +121,13 @@ class TestBase(unittest.TestCase):
         square_output = Square.load_from_file()
         self.assertEqual(square_output, [])
 
-        warn = "load_from_file() takes 1 positional argument but 2 were given"
-
         with self.assertRaises(TypeError) as msg:
             Rectangle.load_from_file('Monty Python')
 
-        self.assertEqual(warn, str(msg.exception))
+        self.assertEqual(
+            "load_from_file() takes 1 positional argument but 2 were given",
+            str(msg.exception)
+        )
 
     def test_create(self):
         """
