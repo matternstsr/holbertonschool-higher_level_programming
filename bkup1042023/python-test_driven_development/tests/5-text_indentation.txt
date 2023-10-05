@@ -1,0 +1,85 @@
+# 5-text_indentation.py
+# Matthew Ernst 6628@holbertonstudents.com
+
+==============================
+How to Use 5-text_indentation.py
+==============================
+
+My function- def text_indentation(...)
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+=====Successful Functions=====
+
+--------Regular--------
+
+>>> text_indentation("Matt?")
+Matt?
+<BLANKLINE>
+
+>>> text_indentation("Matt?: Are you there?? Hello?  ")
+Matt?
+<BLANKLINE>
+:
+<BLANKLINE>
+Are you there?
+<BLANKLINE>
+?
+<BLANKLINE>
+Hello?
+<BLANKLINE>
+
+>>> text_indentation("Matt?: Are you there?    Hello. Home? !  ")
+Matt?
+<BLANKLINE>
+:
+<BLANKLINE>
+Are you there?
+<BLANKLINE>
+Hello.
+<BLANKLINE>
+Home?
+<BLANKLINE>
+!  
+
+>>> text_indentation("Matt:  " + ".Are you ?There")
+Matt:
+<BLANKLINE>
+.
+<BLANKLINE>
+Are you ?
+<BLANKLINE>
+There
+
+
+>>> text_indentation("Matt:  " + ".Ar.e you?Th:ere" + str (42))
+Matt:
+<BLANKLINE>
+.
+<BLANKLINE>
+Ar.
+<BLANKLINE>
+e you?
+<BLANKLINE>
+Th:
+<BLANKLINE>
+ere42
+
+
+=====UnSuccessful Functions=====
+
+>>> text_indentation(42)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(str(42.?))
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> text_indentation(str(42.:Matt))
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'

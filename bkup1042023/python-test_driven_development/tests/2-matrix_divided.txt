@@ -1,0 +1,92 @@
+# 2-matrix_divided.txt
+# Matthew Ernst 6628@holbertonstudents.com
+
+==============================
+How to Use 2-matrix_divided.py
+==============================
+
+The function - def matrix_divided(matrix, div):
+
+=====Successful Functions=====
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+... [3, 6, 9],
+... [12, 15, 18]
+... ]
+
+--------Successfull Tests--------
+
+------ REGULAR TEST -------------
+
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+------ Negatives --------------
+
+>>> print(matrix_divided(matrix, -3))
+[[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+
+------infinity FLOATS -------------
+
+>>> print(matrix_divided(matrix, float('inf')))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+------ Floats ----------------
+
+>>> print(matrix_divided(matrix, 0.5))
+[[6.0, 12.0, 18.0], [24.0, 30.0, 36.0]]
+
+---------UnSuccessfull tests -----------
+
+------Missing one argument
+
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+... ]
+
+>>> print(matrix_divided(matrix, ))
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+------Matrix is not float or int
+
+>>> matrix = [
+...     [5, "This is hard", 7],
+...     [2, 4, 6]
+... ]
+>>> print(matrix_divided(matrix, 1.0))
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+------Divided by Zero
+
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+------Row size are different
+
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6, 7, 8]
+... ]
+
+>>> print(matrix_divided(matrix, 7.8))
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+------div is not float or int
+
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "wuzzup"))
+Traceback (most recent call last):
+TypeError: div must be a number
+
+
+===END===
+

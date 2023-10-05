@@ -1,0 +1,72 @@
+# You can only use floats and ints?
+# You cant use strings?
+# You cant have more than 1 number?
+# You must have both ints , or one of each float and int?
+# you need to inclulde negative numbers?
+
+The function - add_integer(a, b=98)
+
+=====Successful Functions=====
+>>> add_integer = __import__('0-add_integer').add_integer
+
+--------regular ints--------
+
+>>> add_integer(22, 52)
+74
+
+>>> add_integer(1)
+99
+
+--------Floats---------
+
+>>> add_integer(22.1, 28.2)
+50
+
+--------Negatives---------
+
+>>> add_integer(-20, -25)
+-45
+
+>>> add_integer(60, -10)
+50
+
+>>> add_integer(5.2, -7.3)
+-2
+
+--------Combinations----------
+
+>>> add_integer(40.5, -20)
+20
+
+>>> add_integer(50, 10.7)
+60
+
+
+=====UnSuccessful Functions=====
+
+>>> add_integer(3, "Testing")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("Testing", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(1000, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(1000, float('NaN'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(1000.1, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+===END===
+
