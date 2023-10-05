@@ -79,6 +79,7 @@ class TestSquareInstantiation(unittest.TestCase):
     def test_tuple_id(self):
         with self.assertRaises(TypeError):
             square = Square((1, 2, 3))
+
     def test_no_argument(self):
         with self.assertRaises(TypeError):
             square1 = Square()
@@ -130,13 +131,7 @@ class TestSquareMethods(unittest.TestCase):
         square.display()
         self.assertEqual(mock_stdout.getvalue(), "####\n####\n####\n####\n")
 
-    # ... Other test cases ...
-    def test_display(self, mock_stdout):
-        square = Square(4)
-        square.display()
-        self.assertEqual(mock_stdout.getvalue(), "####\n####\n####\n####\n")
-
-    def test_str_method(self):
+        def test_str_method(self):
         square = Square(5, 2, 3, 10)
         self.assertEqual(str(square), "[Square] (10) 2/3 - 5")
 
