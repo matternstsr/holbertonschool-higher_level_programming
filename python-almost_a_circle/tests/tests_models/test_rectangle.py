@@ -17,7 +17,7 @@ class TestRectangleInstantiation(unittest.TestCase):
         self.assertEqual(rect.width, 5)
         self.assertEqual(rect.height, 10)
 
-def test_width_and_height_edge_case(self):
+    def test_width_and_height_edge_case(self):
         rect = Rectangle(1, 1)  # Minimum valid dimensions
         self.assertEqual(rect.width, 1)
         self.assertEqual(rect.height, 1)
