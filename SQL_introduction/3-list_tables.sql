@@ -1,2 +1,2 @@
--- show all server databases
-SHOW * DATABASES;
+-- show all tables in databases
+SHOW TABLES;
