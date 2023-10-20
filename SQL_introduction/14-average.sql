@@ -1,2 +1,2 @@
--- removes all records with score <= 5 in table second_table of database
-DELETE FROM second_table WHERE score <= 5;
+-- select the avg from table of score
+SELECT score, avg(*) AS number FROM second_table GROUP BY score ORDER BY number DESC;
