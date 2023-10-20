@@ -1,0 +1,1 @@
+SHOW TABLES (score, name) VALUES order by score desc;
