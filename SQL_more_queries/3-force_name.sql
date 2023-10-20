@@ -1,4 +1,4 @@
--- Check if the database exists, and if not, create it
+-- Check if the database exists, and if not, create it, name not null
 CREATE TABLE IF NOT EXISTS first_table(
     id INT,
-    name VARCHAR(256) and IS NOT NULL);
+    name VARCHAR(256) WHERE IS NOT NULL);
