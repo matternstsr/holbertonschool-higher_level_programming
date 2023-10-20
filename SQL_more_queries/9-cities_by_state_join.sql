@@ -5,7 +5,7 @@
 
 USE hbtn_0d_usa;
 
-SELECT city.id, city.name, state.name
-FROM cities AS city
-JOIN states as state ON city.state_id = state.id
-ORDER BY city.id ASC;
+SELECT cities.id, cities.name, states.name
+FROM cities
+INNER JOIN states ON cities.state_id = states.id
+ORDER BY cities.id ASC;
