@@ -6,7 +6,7 @@
 -- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
 -- You can use only one SELECT statement
 
-SELECT tv_shows.title, IFNULL(tv_show_genres.genre_id, 'NULL') AS genre_id
+SELECT tv_shows.title, AS genre_id
 FROM tv_shows
 LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
 ORDER BY tv_shows.title ASC, genre_id ASC;
