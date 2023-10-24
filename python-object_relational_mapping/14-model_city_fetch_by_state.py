@@ -44,11 +44,11 @@ def fetching_cities():
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-
-    for state, city in cityquery
     
-        cityquery = session.query(State, City) \
-            .filter(City.state_id == State.id).all():
+    cityquery = session.query(State, City) \
+        .filter(City.state_id == State.id).all():
+                
+    for state, city in cityquery
         print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.commit()
