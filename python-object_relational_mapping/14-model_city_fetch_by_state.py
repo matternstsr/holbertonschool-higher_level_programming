@@ -46,9 +46,9 @@ def fetching_cities():
     session = Session()
     
     cityquery = session.query(State, City) \
-        .filter(City.state_id == State.id).all():
+        .filter(City.state_id == State.id).all()
                 
-    for state, city in cityquery
+    for state, city in cityquery:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.commit()
