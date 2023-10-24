@@ -26,7 +26,7 @@ def select_states():
                          db=database)
     database_cursor  = db.cursor()
     database_cursor.execute('SELECT * FROM states ORDER BY id ASC')
-    states = database_cursor database_cursor.fetchall()
+    states = database_cursor.fetchall()
     for state in states:
         print(state)
     database_cursor.close()
