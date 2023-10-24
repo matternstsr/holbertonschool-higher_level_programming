@@ -31,7 +31,7 @@ def create_a_state():
     session = Session()
 
     new_state = State(name='Louisiana')
-    State.add(new_state)
+    session.add(new_state)
 
     state = session.query(State).filter_by(name='Louisiana').first()
     print("{}".format(state.id))
