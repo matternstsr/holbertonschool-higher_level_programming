@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-""" Write a script that lists all states from the database hbtn_0e_0_usa: """
-
+"""SelectStates module"""
 import MySQLdb
 import sys
 
 
-def list_states():
-    """ Selects each state from database """
+def select_states():
+    """Grabs states from the database"""
 
     username = sys.argv[1]
     password = sys.argv[2]
@@ -17,14 +16,14 @@ def list_states():
                          user=username,
                          passwd=password,
                          db=database)
-    cursor = db.cursor()
-    cursor.execute('SELECT * FROM states ORDER BY id ASC')
-    states = cursor.fetchall()
+    database_cursor = db.cursor()
+    database_cursor.execute('SELECT * FROM states ORDER BY id ASC')
+    states = database_cursor.fetchall()
     for state in states:
         print(state)
-    cursor.close()
+    database_cursor.close()
     db.close()
 
 
 if __name__ == "__main__":
-    list_states()
+    select_states()
