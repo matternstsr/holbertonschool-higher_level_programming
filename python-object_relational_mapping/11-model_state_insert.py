@@ -29,10 +29,10 @@ def create_a_state():
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    
+
     new_state = State(name='Louisiana')
-    state.add(new_state)
-    
+    State.add(new_state)
+
     state = session.query(State).filter_by(name='Louisiana').first()
     print("{}".format(state.id))
     session.close()
