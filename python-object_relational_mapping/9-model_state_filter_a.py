@@ -30,7 +30,7 @@ def fetch_all():
     Session.configure(bind=engine)
     session = Session()
     for state in session.query(State).filter(
-            State.name.like('%a')).order_by(State.id):
+            State.name.like('%a%')).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
     session.close()
 
