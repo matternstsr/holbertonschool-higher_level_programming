@@ -20,7 +20,6 @@ def select_states():
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    database = sys.argv[4]
 
     db = MySQLdb.connect(host='localhost',
                          port=3306,
