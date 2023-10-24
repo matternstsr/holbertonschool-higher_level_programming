@@ -16,7 +16,7 @@ Your code should not be executed when imported"""
 import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from model_state import Base, State
+from model_state import State, Base
 
 
 def fetch_all():
@@ -35,7 +35,7 @@ def fetch_all():
     session = Session()
     state = session.query(State).filter_by(name=statenametosearch).first()
     if state:
-        print("{}: {}".format(state.id, state.name))
+        print("{}".format(state.id,))
     else:
         print("Not found")
 
