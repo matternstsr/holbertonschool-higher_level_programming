@@ -27,17 +27,18 @@ def fetch_all():
     statenametosearch = sys.argv[4]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        username, password, database, statenametosearch), pool_pre_ping=True)
+        username, password, database,), pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    for state in session.query(State).filter(
-            State.name.like('%a%')).order_by(State.id):
-        if state:
-            print("{}: {}".format(state.id, state.name))
-        else:print("Not found")
+    state = session.query(State).filter_by(name=statenametosearch).first()
+    if state:
+        print("{}: {}".format(state.id, state.name))
+    else:
+        print("Not found")
+
     session.close()
 
 
