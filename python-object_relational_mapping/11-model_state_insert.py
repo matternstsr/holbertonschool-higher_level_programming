@@ -16,7 +16,7 @@ from sqlalchemy import create_engine
 from model_state import State, Base
 
 
-def fetch_all():
+def create_a_state():
     """Fetching all states"""
     username = sys.argv[1]
     password = sys.argv[2]
@@ -29,12 +29,14 @@ def fetch_all():
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
+    
     new_state = State(name='Louisiana')
-    state = session.add(new_state)
+    state.add(new_state)
+    
     state = session.query(State).filter_by(name='Louisiana').first()
     print("{}".format(state.id))
     session.close()
 
 
 if __name__ == "__main__":
-    fetch_all()
+    create_a_state()
