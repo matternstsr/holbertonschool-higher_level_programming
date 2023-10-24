@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a Python file similar to model_state.py named model_city.py 
+"""Write a Python file similar to model_state.py named model_city.py
 that contains the class definition of a City.
 City class:
 inherits from Base (imported from model_state)
@@ -17,6 +17,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 
 Base = declarative_base()
+
 
 class City(Base):
     """City model class"""
