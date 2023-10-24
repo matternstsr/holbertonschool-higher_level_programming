@@ -31,10 +31,11 @@ def create_a_state():
     session = Session()
 
     new_state = State(name='Louisiana')
-    session.add(new_state)
+    state = session.add(new_state)
 
     state = session.query(State).filter_by(name='Louisiana').first()
     print("{}".format(state.id))
+    session.commit()
     session.close()
 
 
