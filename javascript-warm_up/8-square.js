@@ -8,4 +8,4 @@ if (!isNaN(size) && Number.isInteger(size)) {
     for (let j = 0; j < size; j++) { row += 'X'; }
     console.log(row);
   }
-} else { console.log('missing size'); }
+} else { console.log('Missing size'); }
