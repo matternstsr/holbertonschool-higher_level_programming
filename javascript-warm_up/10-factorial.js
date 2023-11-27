@@ -14,4 +14,4 @@ const n = parseInt(arg);
 
 const result = factorial(n);
 
-console.log(`Factorial of ${arg} is: ${result}`);
+console.log(`Factorial of ${args} is: ${result}`);
