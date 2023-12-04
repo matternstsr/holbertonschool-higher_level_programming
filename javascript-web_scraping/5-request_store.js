@@ -15,8 +15,5 @@ request.get(url, (error, response, body) => {
 
   // Writing the contents to the specified file
   fs.writeFile(filePath, body, 'utf-8', (err) => {
-    if (err) { console.error(err); process.exit(1); }
-
-    console.log(`Body response written to ${filePath}`);
-  });
+    if (err) { console.error(err); process.exit(1); } });
 });
