@@ -9,6 +9,8 @@ const contentToWrite = process.argv[3];
 if (!filePath || !contentToWrite) { console.error('Usage: node 1-writeme.js <file-path> <content-to-write>'); process.exit(1); }
 
 // Write the string to the file in utf-8 encoding
-fs.writeFile(filePath, contentToWrite, 'utf-8', (error) => { if (error) { console.error(error); process.exit(1); }
+fs.writeFile(filePath, contentToWrite, 'utf-8', (error) => {
+  if (error) { console.error(error); process.exit(1); }
 
-  console.log(`Content has been written to ${filePath}`); });
+  console.log(`Content has been written to ${filePath}`);
+});
