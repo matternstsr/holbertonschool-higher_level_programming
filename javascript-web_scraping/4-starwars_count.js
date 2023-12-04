@@ -10,7 +10,7 @@ if (!apiUrl) {
   process.exit(1);
 }
 
-// Setting the char for ID for Wedge Antilles
+// Setting the character ID for Wedge Antilles
 const wedgeAntillesId = 18;
 
 // Making a GET request to the Star Wars API
@@ -23,9 +23,9 @@ request.get(apiUrl, (error, response, body) => {
   // Parsing the JSON response
   const filmsData = JSON.parse(body);
 
-  // Filtering movies where Wedge Antilles
+  // Filtering movies where Wedge Antilles is present
   const moviesWithWedge = filmsData.results.filter((film) => {
-    return film.characters.includes(`https://swapi-api.hbtn.io/api/people/${wedgeAntillesId}/`);
+    return film.characters.find((character) => character.endsWith(`/${wedgeAntillesId}/`));
   });
 
   // Display the count of movies with Wedge Antilles
