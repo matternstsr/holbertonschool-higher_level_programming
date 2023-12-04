@@ -10,7 +10,10 @@ if (!filePath || !contentToWrite) { console.error('Usage: node 1-writeme.js <fil
 
 // Write the string to the file in utf-8 encoding
 fs.writeFile(filePath, contentToWrite, 'utf-8', (error) => {
-  if (error) { console.error(error); process.exit(1); }
+  if (error) {
+    console.error(error);
+    process.exit(1);
+  }
 
   console.log(`Content has been written to ${filePath}`);
 });
