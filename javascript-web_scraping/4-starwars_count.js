@@ -19,7 +19,7 @@ request.get(apiUrl, (error, response, body) => {
 
   // Filtering movies where Wedge Antilles
   const moviesWithWedge = filmsData.results.filter((film) => {
-    return film.characters.includes(`https://swapi-api.hbtn.io/api/people/{wedgeAntillesId}/`);
+    return film.characters.includes('https://swapi-api.hbtn.io/api/people/{wedgeAntillesId}/');
   });
 
   // Display the count of movies with Wedge Antilles
