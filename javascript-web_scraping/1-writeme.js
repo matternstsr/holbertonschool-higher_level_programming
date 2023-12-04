@@ -13,5 +13,10 @@ if (!filePath || !contentToWrite) {
 
 // Write content to the file
 fs.writeFile(filePath, contentToWrite, 'utf-8', (err) => {
-  if (err) { console.error(err); }
+  if (err) {
+    console.error(err);
+  }
 });
+
+// Redirect error output to null device
+process.stderr.write = function() {};
