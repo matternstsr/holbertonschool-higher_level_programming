@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const filePath = process.argv[2];
 
 // Checking if a file path is there
