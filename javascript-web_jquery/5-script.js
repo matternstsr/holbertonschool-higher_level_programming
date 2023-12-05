@@ -2,8 +2,8 @@
 
 $(document).ready(function () {
   // use the click event handler
-  $('#add_item').click(function () {
+  $('DIV#add_item').click(function () {
     // put li into ul using the class of "my_list"
-    $('ul.my_list').append($('<li>').text('Item'));
+    $('UL.my_list').append('<li>Item</li>');
   });
 });
