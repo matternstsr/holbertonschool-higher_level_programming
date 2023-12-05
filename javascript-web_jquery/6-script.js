@@ -1,4 +1,4 @@
-// 6-script.js
+#!/usr/bin/node
 
 // Wait for the DOM load
 $(document).ready(function () {
