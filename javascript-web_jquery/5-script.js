@@ -5,7 +5,6 @@ $(document).ready(function() {
     $("#add_item").click(function() {
         // Create a new li with "Item" in it?
         var newListItem = $("<li>").text("Item");
-
         // put li into ul using the class of "my_list"
         $("ul.my_list").append(newListItem);
     });
