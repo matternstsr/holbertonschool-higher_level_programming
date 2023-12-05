@@ -10,7 +10,7 @@ $(document).ready(function () {
       if (data.results && data.results.length > 0) {
         // Go through each movie and add its title
         data.results.forEach(function (movie) {
-            $('UL#list_movies').append('<li>' + movie.title + '</li>');
+            $('UL#list_movies').append('<LI>' + movie.title + '</LI>');
         });
       } else { console.error('No movie data found'); }
     });
