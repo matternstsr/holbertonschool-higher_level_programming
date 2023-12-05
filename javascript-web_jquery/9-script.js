@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+// Wait for the DOM load
 $(document).ready(function () {
     // Fetch data in the new lang
     $.ajax({
