@@ -8,7 +8,7 @@ $(document).ready(function () {
     method: 'GET',
     success: function (data) {
       // update the text for the chosen header
-      $('#character').text(data.name);
+      $('DIV#character').text(data.name);
     }
   });
 });
