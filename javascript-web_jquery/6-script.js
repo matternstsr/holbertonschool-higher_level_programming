@@ -8,7 +8,7 @@ $(document).ready(function () {
     // use the click event handler
     updateHeaderDiv.click(function () {
       // update the text for the chosen header
-      $("header").text("New Header!!!!");
+      $("header").text("New Header!!!");
     });
   });
   
