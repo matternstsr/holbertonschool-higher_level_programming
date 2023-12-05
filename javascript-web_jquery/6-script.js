@@ -3,7 +3,7 @@
 // Wait for the DOM load
 $(document).ready(function () {
   // use the click event handler
-  $('#update_header').click(function () {
+  $('DIV#update_header').click(function () {
     // update the text for the chosen header
     $('header').text('New Header!!!');
   });
